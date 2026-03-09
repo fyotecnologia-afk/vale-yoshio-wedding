@@ -1,0 +1,21 @@
+.galleryContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.previewImage {
+  width: 100%;
+  max-width: 500px; /* Máximo tamaño en desktop */
+  height: auto;
+  cursor: pointer;
+  border: 5px solid rgb(206, 167, 150);
+  border-radius: 2px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.previewImage:hover {
+  transform: scale(1.02);
+}

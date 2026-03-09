@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum Estado {
+  ACTIVO
+  INACTIVO
+}
+
+enum CategoriaInvitado {
+  ADULTO
+  NINO
+}
+
+model Invitacion {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  numero            String          @unique
+  estado            Estado          @default(ACTIVO)
+
+  // Campos generales
+  hostedBy          String?         // Hosted By
+  tipo              String?         // Tipo
+  familia           String?         // Familia
+
+  invitados         Invitado[]
+  confirmaciones    Confirmacion[]
+}
+
+model Invitado {
+  id                    String       @id @default(auto()) @map("_id") @db.ObjectId
+  nombre                String
+  principal             Boolean?     // Principal
+  categoria             CategoriaInvitado? // Adulto | Niño
+  especial              Boolean?     // Cumpleaños u otra ocasión especial
+  estado                Estado       @default(ACTIVO)
+  invitacionId          String
+  invitacion            Invitacion?  @relation(fields: [invitacionId], references: [id])
+
+  confirmacionInvitados ConfirmacionInvitado[]
+}
+
+model Confirmacion {
+  id            String       @id @default(auto()) @map("_id") @db.ObjectId
+  dedicatoria   String
+  createdAt     DateTime     @default(now())
+  invitacionId  String
+  invitacion    Invitacion?  @relation(fields: [invitacionId], references: [id])
+
+  confirmacionInvitados ConfirmacionInvitado[]
+}
+
+enum Respuesta {
+  SI
+  NO
+}
+
+model ConfirmacionInvitado {
+  id             String       @id @default(auto()) @map("_id") @db.ObjectId
+
+  confirmacionId String
+  confirmacion   Confirmacion @relation(fields: [confirmacionId], references: [id])
+
+  invitadoId     String
+  invitado       Invitado     @relation(fields: [invitadoId], references: [id])
+
+  respuesta      Respuesta
+
+  @@unique([confirmacionId, invitadoId])
+}
+
+// ---------------- Nueva tabla de parámetros globales ----------------
+model ParametrosGlobales {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  tipo        String   // "fechaLimite" o "maxIntentos"
+  valorDate   String? // solo se usa para fecha
+  valorNumber Int?      // solo se usa para número de intentos
+}

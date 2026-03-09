@@ -1,0 +1,53 @@
+{
+  "name": "vale&yosh",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.13.0",
+    "@react-spring/parallax": "^10.0.1",
+    "@react-spring/web": "^10.0.1",
+    "@use-gesture/react": "^10.3.1",
+    "animate.css": "^4.1.1",
+    "antd": "^5.26.7",
+    "bcrypt": "^6.0.0",
+    "file-saver": "^2.0.5",
+    "gsap": "^3.13.0",
+    "iron-session": "^8.0.4",
+    "jspdf": "^3.0.1",
+    "jspdf-autotable": "^5.0.2",
+    "lodash": "^4.17.21",
+    "lodash.shuffle": "^4.2.0",
+    "mongodb": "^6.18.0",
+    "next": "15.4.5",
+    "prisma": "^6.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-type-animation": "^3.2.0",
+    "react-use-measure": "^2.1.7",
+    "sass": "^1.89.2",
+    "three": "^0.179.1",
+    "wow.js": "^1.2.2",
+    "xlsx": "^0.18.5",
+    "yet-another-react-lightbox": "^3.25.0",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/file-saver": "^2.0.7",
+    "@types/lodash.shuffle": "^4.2.9",
+    "@types/node": "^20.19.9",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "names": "Valeria & Yoshio",
+  "date": "2026-04-24T16:30:00",
+  "slides": [
+    "/images/mansory/gallery-12.webp",
+    "/images/mansory/gallery-11.webp"
+  ],
+  "ceremonies": [
+    {
+      "title": "Ceremonia Religiosa",
+      "date": "2026-04-24T15:45:00",
+      "location": "Santuario del señor de la Misericordia",
+      "address": "Calle 3 Sur & Calle 27 Pte, Barrio de la Magdalena, 72762 Cholula de Rivadavia, Pue.",
+      "mapsLink": "https://maps.app.goo.gl/43PRs1sev2KjcsqGA",
+      "imgUrl": "/images/iglesia.webp",
+      "iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.655859471943!2d-98.3143802!3d19.050790199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc8812b24888d%3A0xeee04ce51ef82790!2sSantuario%20del%20Se%C3%B1or%20de%20la%20Misericordia!5e1!3m2!1ses!2smx!4v1772769105559!5m2!1ses!2smx"
+    }
+  ],
+  "reception": {
+    "title": "Recepción",
+    "date": "2026-04-24T18:45:00",
+    "location": "Salón Jardín Ex Hacienda San Bartolo",
+    "address": "Av. 3 sur 12105-A, Guadalupe Hidalgo, 72490, Heroica Puebla de Zaragoza",
+    "mapsLink": "https://maps.app.goo.gl/WxNBCo3VqBJZinJU6",
+    "imgUrl": "/images/salon.webp",
+    "iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.994329835954!2d-98.2385717!3d18.9801097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfb8c0a6749e4d%3A0xe71d4ecc5a864079!2sSal%C3%B3n%20Jard%C3%ADn%20Ex%20Hacienda%20San%20Bartolo!5e1!3m2!1sen!2smx!4v1772769470731!5m2!1sen!2smx"
+  },
+  "family": {
+    "parents": [
+      {
+        "names": [
+          "María de Lourdes Meza Hernández",
+          "José Rafael Maldonado Hernández"
+        ],
+        "role": "PADRES DE LA NOVIA"
+      },
+      {
+        "names": ["Mercedes Vázquez Ruiz", "Patricio Nájera Ramírez "],
+        "role": "PADRES DEL NOVIO"
+      }
+    ],
+    "godparents": [
+      {
+        "names": ["Areli Flores Meza", "Jesús Osvaldo Cholula Guerrero"],
+        "role": "PADRINOS DE VELACIÓN"
+      }
+    ]
+  },
+  "hotels": [
+    {
+      "name": "Aloft Guadalajara Sur",
+      "address": "Av. Punto Sur 235, Los Gavilanes, 45645 Los Gavilanes, Jal.",
+      "phone": "",
+      "mapsLink": "https://maps.app.goo.gl/XLM36hnSgJSpzux26",
+      "image": "/images/hotels/Aloft.webp"
+    },
+    {
+      "name": "Ramada Encore GDL Sur",
+      "address": "1710 Lopez Mateos Sur Ave, 45645 Jal.",
+      "phone": "",
+      "mapsLink": "https://maps.app.goo.gl/7GXVfwRL5JtirUJ69",
+      "image": "/images/hotels/Ramada.webp"
+    },
+    {
+      "name": "Microtel Inn & Suites by Wyndham Guadalajara Sur",
+      "address": "Av. Adolfo López Mateos Sur 1710-Int. F-1, San José del Tajo, El Palomar, 45645 Palomar, Jal.",
+      "phone": "",
+      "mapsLink": "https://maps.app.goo.gl/9JhY1fQcdWovC91Z7",
+      "image": "/images/hotels/Microtel.webp"
+    },
+    {
+      "name": "City Express Plus by Marriott Guadalajara Palomar",
+      "address": "Av. Adolfo López Mateos Sur 1450, Col. Las Villas, 45643 Palomar, Jal.",
+      "phone": "",
+      "mapsLink": "https://maps.app.goo.gl/xearx9Yxwny3nqtFA",
+      "image": "/images/hotels/Citiexpress.webp"
+    }
+  ],
+  "makeup": [
+    {
+      "avatar": "/images/makeup/moni-colmenares.webp",
+      "username": "moni.colmenares",
+      "followers": "1.494 seguidores",
+      "name": "Monica Colmenares",
+      "phone": "33 1366 4738",
+      "code": "Boda Majo y Mau",
+      "service": "Servicio A Domicilio",
+      "profileLink": "https://instagram.com/moni.colmenares"
+    },
+    {
+      "avatar": "/images/makeup/esmeralda.webp",
+      "username": "esmemejiamakeup",
+      "followers": "2.940 seguidores",
+      "name": "Esmeralda Mejía",
+      "phone": "33 3956 6923",
+      "service": "Servicio A Domicilio",
+      "profileLink": "https://instagram.com/esmemejiamakeup"
+    }
+  ],
+  "rent_cars": [
+    {
+      "name": "Hertz Guadalajara",
+      "text": "(Descuento Especial)",
+      "image": "/images/hertz.webp",
+      "link": "hertzmexico.com/bonda/"
+    },
+    {
+      "name": "Alamo",
+      "text": "(Código Descuento)",
+      "image": "/images/alamo.webp",
+      "link": "wa.me/5565411924?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20obtener%20el%20c%C3%B3digo%20de%20Alamo%20para%20rentar%20un%20auto%20para%20la%20boda%20de%20Majo%20y%20Mau"
+    }
+  ],
+  "itinerary": [
+    {
+      "time": "3:45 PM",
+      "title": "Ceremonia Religiosa",
+      "location": "",
+      "description": "Acompáñanos en la ceremonia donde uniremos nuestras vidas."
+    },
+    {
+      "time": "6:45 PM",
+      "title": "Recepción",
+      "location": "",
+      "description": "Cena, brindis y baile para celebrar juntos."
+    }
+  ],
+  "giftTable": {
+    "message": "Celebrar contigo es lo más importante, gracias por acompañarnos. Si gustas obsequiarnos un detalle, aquí te dejamos nuestra mesa de regalos.",
+    "options": [
+      {
+        "type": "Amazon",
+        "details": {
+          "numeroEvento": "3GNQQ5X7W7K4B"
+        }
+      }
+    ]
+  },
+  "dressCode": {
+    "image": "/images/dress-code.webp",
+    "restrictions": [
+      "Mujeres: Vestido largo, zapatilla y bolso.",
+      "Hombres: Traje formal con corbata, zapato cerrado y calcetines."
+    ]
+  },
+  "restrictions": {
+    "restriction": [
+      "Sólo adultos",
+      "Pases intransferibles",
+      "No vestidos blancos, beige, marfil o similares (reservados para la novia) ni trajes color verde olivo."
+    ]
+  },
+  "frase": "“Así que ya no son dos, sino uno solo. Por tanto, lo que Dios ha unido, que no lo separe el hombre”\n- Mateo 19:6.",
+  "fraseForm": "Nos encantará contar contigo. Por favor confirma tu asistencia antes del 17 de octubre para ayudarnos a preparar todo con cariño."
+}
