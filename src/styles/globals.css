@@ -1,0 +1,93 @@
+/* styles/globals.css */
+@import "animate.css/animate.min.css";
+
+:root {
+  --font-meow: "Meow Script";
+  --font-manjari: "Manjari", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Esto hace que el padding no aumente el tamaño del elemento */
+}
+
+html,
+body,
+main {
+  font-family: var(--font-manjari) !important;
+  color: rgb(141, 144, 125);
+  background-color: rgba(237, 210, 203, 0.3) !important;
+}
+
+.title-decorative {
+  font-family: var(--font-meow) !important;
+  font-weight: 200 !important;
+  color: rgb(141, 144, 125) !important;
+  font-size: clamp(2.4rem, 4vw, 4rem) !important;
+  margin: 1rem 0px 1rem !important;
+  text-align: center !important;
+}
+
+.text-responsive {
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+.title-spinner {
+  font-family: var(--font-meow) !important;
+  font-weight: 200 !important;
+  color: #8d907d !important;
+  font-size: 2.4rem !important;
+  margin: 1rem 0px 1rem !important;
+  text-align: center !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+label,
+.font-manjari {
+  font-family: var(--font-manjari);
+  color: #7a8b75;
+}
+
+span {
+  font-family: var(--font-manjari);
+}
+
+.title-script {
+  font-family: var(--font-manjari);
+}
+
+.title-serif {
+  font-family: var(--font-manjari);
+}
+
+.custom-family-card .ant-card-body {
+  padding: 0;
+}
+
+/* a,
+a:link {
+  color: #7a8b75 !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+a:visited {
+  color: #5f6f5d !important;
+}
+
+a:hover {
+  color: #98a88f !important;
+  text-decoration: underline !important;
+}
+
+a:active {
+  color: #4d5b4a !important;
+}
+
+a:focus {
+  color: #7a8b75 !important;
+  border-bottom: 1px dotted #7a8b75 !important;
+} */

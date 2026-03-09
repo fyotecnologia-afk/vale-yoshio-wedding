@@ -1,0 +1,27 @@
+.container {
+  background-color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quoteWrapper {
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.quoteText {
+  font-family: var(--font-meow);
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: 100;
+  white-space: pre-line; /* permite que \n genere saltos de línea */
+  word-wrap: break-word;
+}
+
+.quoteWrapper {
+  white-space: pre-wrap; /* permite múltiples líneas */
+  word-wrap: break-word;
+  position: relative;
+}

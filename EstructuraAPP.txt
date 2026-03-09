@@ -1,0 +1,26 @@
+my-wedding-app/
+│
+├── pages/
+│   ├── api/
+│   │   └── invitaciones/
+│   │       ├── [numero].ts       # Verifica invitación y maneja lógica del backend
+│   │       └── confirmar.ts      # Guarda confirmaciones y dedicatoria
+│   ├── index.tsx                 # Página principal con formulario
+│   └── _app.tsx                  # Configuración general del frontend (SPA)
+│
+├── components/
+│   ├── FormularioConfirmacion.tsx  # Formulario para confirmar asistencia
+│   └── Mensaje.tsx                 # Componentes de UI
+│
+├── lib/
+│   └── db.ts                    # Conexión a base de datos (ej: Prisma o MySQL client)
+│
+├── prisma/
+│   └── schema.prisma            # Modelo de base de datos (si usas Prisma)
+│
+├── styles/
+│   └── globals.css
+│
+├── tsconfig.json
+├── next.config.js
+└── package.json
