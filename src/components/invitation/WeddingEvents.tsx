@@ -149,13 +149,13 @@ const ReceptionCard: React.FC<{ reception: any }> = ({ reception }) => (
       {reception.location}
     </Text>
     <Text
-      style={{ display: "block", textAlign: "center", margin: "0px 30px 0" }}
+      style={{ display: "block", textAlign: "center", marginBottom: 0 }}
       className="font-manjari"
     >
       {formatLongDate(reception.date)}
     </Text>
     <Text
-      style={{ display: "block", textAlign: "center", margin: "0px 30px 0" }}
+      style={{ display: "block", textAlign: "center", marginBottom: 12 }}
       className="font-manjari"
     >
       {reception.address}
