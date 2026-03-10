@@ -67,6 +67,9 @@ const Welcome: React.FC = () => {
       {/* Imagen */}
       <div ref={imageRef} className={styles.imageWrapper}>
         <img src={slides[0]} alt="Wedding" className={styles.image} />
+
+        <img src="/icons/torn-paper.png" className={styles.tornTop} />
+        <img src="/icons/torn-paper.png" className={styles.tornBottom} />
       </div>
 
       {/* Fecha */}

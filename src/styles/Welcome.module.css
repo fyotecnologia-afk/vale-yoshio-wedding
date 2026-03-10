@@ -7,14 +7,13 @@
 
 .header {
   text-align: center;
-  /* padding-bottom: 10px; */
 }
 
 .names {
   font-family: var(--font-meow);
   font-weight: 200;
   color: rgb(141, 144, 125);
-  font-size: clamp(3rem, 5vw, 5rem) !important;
+  font-size: clamp(3rem, 5vw, 5rem);
   margin: 0;
 }
 
@@ -29,10 +28,8 @@
 }
 
 .imageWrapper {
-  padding: 0;
-  border: 5px solid rgb(206, 167, 150);
-  border-radius: 2px;
-  margin: 0 0;
+  position: relative;
+  overflow: hidden;
   max-width: 350px;
   width: 100%;
 }
@@ -41,6 +38,26 @@
   width: 100%;
   height: auto;
   display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.tornTop,
+.tornBottom {
+  position: absolute;
+  left: -2px;
+  width: calc(100% + 4px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tornTop {
+  top: -2px;
+  transform: scaleY(-1);
+}
+
+.tornBottom {
+  bottom: -2px;
 }
 
 .date {

@@ -72,7 +72,7 @@ fs.readFile(csvFilePath, "utf8", (err, data) => {
   // Generar archivo seed listo para usar
   fs.writeFileSync(
     path.resolve(__dirname, "seedData.js"),
-    "const seedData = " + JSON.stringify(grouped, null, 2) + ";\nmodule.exports = { seedData };\n"
+    "const seedData = " + JSON.stringify(grouped, null, 2) + ";\nmodule.exports = { seedData };\n" // quitar desde + para fix en correr seedData
   );
 
   console.log("Archivo seedData.js generado.");

@@ -16,7 +16,7 @@ body,
 main {
   font-family: var(--font-manjari) !important;
   color: rgb(141, 144, 125);
-  background-color: rgba(237, 210, 203, 0.3) !important;
+  background-color: white !important;
 }
 
 .title-decorative {

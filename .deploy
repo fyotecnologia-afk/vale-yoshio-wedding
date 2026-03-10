@@ -1,0 +1,2 @@
+Para subir datos a prisma:
+node prisma/seed.js
