@@ -1,8 +1,7 @@
-// prisma/seed.js
-const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
+import { PrismaClient } from "@prisma/client";
+import { seedData } from "../seedData.js";
 
-const seedData = require("../seedData").seedData; // ruta correcta a tu seedData.js
+const prisma = new PrismaClient();
 
 async function main() {
   for (const inv of seedData) {
@@ -17,7 +16,7 @@ async function main() {
             nombre: i.nombre,
             principal: i.principal,
             categoria: i.categoria,
-            especial: i.especial, // ahora sí
+            especial: i.especial,
             estado: i.estado || "ACTIVO",
           })),
         },

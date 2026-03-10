@@ -1,4 +1,4 @@
-const seedData = [
+export const seedData = [
   {
     "hostedBy": "PRUEBA",
     "tipo": "PRUEBA",
@@ -1712,4 +1712,4 @@ const seedData = [
     ]
   }
 ];
-module.exports = { seedData };
+// module.exports = { seedData };
