@@ -79,10 +79,10 @@ export default function ConfirmacionPage() {
       <Separador
         src="/icons/flowers.png"
         position="right"
-        overlap={150}
+        overlap={160}
         width={250}
         offsetX={120}
-        offsetY={-100}
+        offsetY={-120}
       />
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <FamilySection />

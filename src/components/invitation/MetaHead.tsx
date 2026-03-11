@@ -10,8 +10,8 @@ interface MetaHeadProps {
 export default function MetaHead({
   title = "Vale y Yoshio Wedding",
   description = "Nos elegimos una vez… y hoy con más amor, nos elegimos para siempre",
-  image = "https://majo-mau-wedding.vercel.app/preview.jpg",
-  url = "https://majo-mau-wedding.vercel.app/",
+  image = "https://vale-yoshio-wedding.vercel.app/preview.jpg",
+  url = "https://vale-yoshio-wedding.vercel.app/",
 }: MetaHeadProps) {
   return (
     <Head>
