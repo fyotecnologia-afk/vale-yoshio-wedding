@@ -1,0 +1,74 @@
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* línea central elegante */
+.timeline :global(.vertical-timeline::before) {
+  background: linear-gradient(
+    to bottom,
+    rgba(206, 167, 150, 0.2),
+    rgb(206, 167, 150),
+    rgba(206, 167, 150, 0.2)
+  );
+  width: 2px;
+}
+
+/* tarjetas */
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1px solid rgba(206, 167, 150, 0.25);
+  padding: 1rem 1.2rem;
+  transition: all 0.4s ease;
+}
+
+/* efecto Apple hover */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 35px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(206, 167, 150, 0.2);
+}
+
+/* iconos flotantes */
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(238, 239, 234);
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  /* box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    0 0 0 2px rgba(206, 167, 150, 0.25); */
+  animation: float 4s ease-in-out infinite;
+}
+
+/* icono */
+.iconWrapper img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* texto */
+.title {
+  color: #7a8b75;
+  margin: 0;
+}
+
+.text {
+  color: #7a8b75;
+  display: block;
+  font-family: var(--font-manjari);
+}
+
+.time {
+  font-weight: 600;
+  color: rgb(206, 167, 150);
+  font-family: var(--font-manjari);
+}

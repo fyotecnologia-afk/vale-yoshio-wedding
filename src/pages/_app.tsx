@@ -5,6 +5,7 @@ import MetaHead from "@/components/invitation/MetaHead";
 import { Meow_Script, Manjari } from "next/font/google";
 
 import "@/styles/globals.css";
+import "react-vertical-timeline-component/style.min.css";
 
 // Fuentes
 const meow = Meow_Script({

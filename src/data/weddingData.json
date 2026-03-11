@@ -114,15 +114,13 @@
   "itinerary": [
     {
       "time": "3:45 PM",
-      "title": "Ceremonia Religiosa",
-      "location": "",
-      "description": "Acompáñanos en la ceremonia donde uniremos nuestras vidas."
+      "title": "Ceremonia",
+      "location": ""
     },
     {
       "time": "6:45 PM",
       "title": "Recepción",
-      "location": "",
-      "description": "Cena, brindis y baile para celebrar juntos."
+      "location": ""
     }
   ],
   "giftTable": {
@@ -140,15 +138,13 @@
     "image": "/images/dress-code.webp",
     "restrictions": [
       "Mujeres: Vestido largo, zapatilla y bolso.",
-      "Hombres: Traje formal con corbata, zapato cerrado y calcetines."
+      "Hombres: Traje formal con corbata, zapato cerrado y calcetines.",
+      "No vestidos blancos, beige, marfil o similares (reservados para la novia) ni trajes color verde olivo.",
+      "Nota: Para mayor comodidad, pueden traer un cambio de tenis acordes al evento para disfrutar la fiesta."
     ]
   },
   "restrictions": {
-    "restriction": [
-      "Sólo adultos",
-      "Pases intransferibles",
-      "No vestidos blancos, beige, marfil o similares (reservados para la novia) ni trajes color verde olivo."
-    ]
+    "restriction": ["Sólo adultos", "Pases intransferibles"]
   },
   "frase": "“Así que ya no son dos, sino uno solo. Por tanto, lo que Dios ha unido, que no lo separe el hombre”\n- Mateo 19:6.",
   "fraseForm": "Nos encantará contar contigo. Por favor confirma tu asistencia antes del 17 de octubre para ayudarnos a preparar todo con cariño."

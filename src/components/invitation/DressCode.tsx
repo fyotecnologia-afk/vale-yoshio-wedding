@@ -46,7 +46,7 @@ const DressCode: React.FC = () => {
       {/* Descripción */}
       <Paragraph
         style={{
-          fontSize: "clamp(0.7rem, 2vw, 1.2rem)",
+          fontSize: "1rem",
           maxWidth: 700,
           margin: "0 auto",
           color: "#7A8B75",

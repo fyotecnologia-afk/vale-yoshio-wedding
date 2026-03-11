@@ -1,0 +1,27 @@
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow:
+    0 0 4px rgba(0, 0, 0, 0.8),
+    0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.label {
+  font-size: 2rem;
+  margin-top: 0.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}

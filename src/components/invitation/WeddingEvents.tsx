@@ -5,9 +5,10 @@ import LocationPinIcon from "./LocationPin";
 
 const { Title, Text } = Typography;
 
-const cardStyle = {
-  border: "3px solid rgb(206, 167, 150)",
-  borderRadius: 2,
+const cardStyle: React.CSSProperties = {
+  background: "transparent",
+  border: "none",
+  boxShadow: "none",
 };
 
 const imageStyle: React.CSSProperties = {
@@ -77,7 +78,7 @@ function formatLongDate(dateString: string) {
 
   return (
     <>
-      {formattedDate} del {date.getFullYear()} a las <strong>{timeStr}</strong>
+      <strong>{timeStr}</strong>
     </>
   );
 }
@@ -94,7 +95,12 @@ const CeremonyCard: React.FC<{ ceremony: any }> = ({ ceremony }) => (
     <img src={ceremony.imgUrl} alt={ceremony.title} style={imageStyle} />
     <Text
       strong
-      style={{ display: "block", textAlign: "center", marginBottom: 0 }}
+      style={{
+        display: "block",
+        textAlign: "center",
+        marginBottom: 0,
+        fontSize: "1rem",
+      }}
       className="font-manjari"
     >
       {ceremony.location}
@@ -143,7 +149,12 @@ const ReceptionCard: React.FC<{ reception: any }> = ({ reception }) => (
     <img src={reception.imgUrl} alt={reception.title} style={imageStyle} />
     <Text
       strong
-      style={{ display: "block", textAlign: "center", marginBottom: 0 }}
+      style={{
+        display: "block",
+        textAlign: "center",
+        marginBottom: 0,
+        fontSize: "1rem",
+      }}
       className="font-manjari"
     >
       {reception.location}
@@ -184,10 +195,10 @@ const WeddingSchedule: React.FC = () => {
   const data = weddingData as any;
 
   return (
-    <div className="font-manjari">
-      <Title level={2} className="title-decorative">
+    <div className="font-manjari" style={{ paddingTop: 20 }}>
+      {/* <Title level={2} className="title-decorative">
         ¿Cuándo y dónde?
-      </Title>
+      </Title> */}
 
       <Row gutter={[16, 16]}>
         {data.ceremonies.map((ceremony: any, index: number) => (

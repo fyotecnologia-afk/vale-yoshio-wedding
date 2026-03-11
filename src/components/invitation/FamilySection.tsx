@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Card, Row, Col } from "antd";
 import weddingData from "@/data/weddingData.json";
+import style from "@/styles/Family.module.css";
 
 const { Title, Text } = Typography;
 
@@ -19,23 +20,19 @@ const FamilySection: React.FC = () => {
 
   const renderPeople = (list: Person[]) =>
     list.map((person, index) => (
-      <Col xs={24} sm={12} md={8} key={index} style={{ marginBottom: 16 }}>
+      <Col xs={24} sm={12} md={8} key={index} style={{ marginBottom: 0 }}>
         <Card
           hoverable
-          className="custom-family-card"
+          className={style.customFamilyCard}
           style={{
             textAlign: "center",
-            borderRadius: 16,
-            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-            border: "2px solid rgb(206, 167, 150)",
-            padding: 5,
           }}
         >
           <Title
             level={4}
             style={{
-              marginBottom: 4,
-              marginTop: 4,
+              marginBottom: 1,
+              marginTop: 1,
               color: "#7a8b75",
               fontSize: "1rem",
             }}

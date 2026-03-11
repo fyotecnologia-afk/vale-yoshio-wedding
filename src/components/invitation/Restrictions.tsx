@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Typography } from "antd";
 import weddingData from "@/data/weddingData.json";
@@ -12,40 +14,57 @@ const Restrictions: React.FC = () => {
   return (
     <div
       style={{
-        maxWidth: "900px",
-        margin: "-20px auto",
+        maxWidth: 900,
+        margin: "0 auto",
         textAlign: "center",
       }}
     >
-      <div>
+      <strong
+        className="font-manjari"
+        style={{
+          display: "block",
+          fontSize: "1rem",
+          lineHeight: 1.6,
+          marginTop: "1rem",
+        }}
+      >
+        SIN NIÑOS
+      </strong>
+
+      <Text
+        className="font-manjari"
+        style={{
+          display: "block",
+          fontSize: "1rem",
+          lineHeight: 1.6,
+          marginBottom: "1rem",
+        }}
+      >
+        Adoramos a tus pequeños, sin embargo papá y mamá también necesitan un
+        día libre. Por favor no niños.
+      </Text>
+
+      <ul
+        style={{
+          listStyle: "none",
+          padding: 0,
+          margin: 0,
+        }}
+      >
         {restrictions.map((item, index) => (
-          <React.Fragment key={index}>
+          <li key={index} style={{ marginBottom: "0.5rem" }}>
             <Text
-              style={{
-                fontSize: "clamp(0.7rem, 2vw, 1.2rem)",
-                lineHeight: 1.6,
-                margin: "1rem 0 0",
-              }}
               className="font-manjari"
+              style={{
+                fontSize: "1rem",
+                lineHeight: 1.6,
+              }}
             >
               {item}
             </Text>
-
-            {index < restrictions.length - 1 && (
-              <Text
-                style={{
-                  fontSize: "clamp(0.7rem, 2vw, 1.2rem)",
-                  lineHeight: 1.6,
-                  margin: "0px 2px 0px",
-                }}
-                className="font-manjari"
-              >
-                |
-              </Text>
-            )}
-          </React.Fragment>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

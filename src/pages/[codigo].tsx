@@ -18,6 +18,7 @@ import DressCode from "@/components/invitation/DressCode";
 import Restrictions from "@/components/invitation/Restrictions";
 import ImagenFinal from "@/components/invitation/ImagenFinal";
 import Separador from "@/components/invitation/Separador";
+import Countdown from "@/components/invitation/Countdown";
 
 // Tipado
 type DataResponse = {
@@ -60,51 +61,112 @@ export default function ConfirmacionPage() {
         src="/icons/flowers.png"
         position="left"
         flipY
-        overlap={100}
+        overlap={60}
         width={350}
         offsetX={-163}
         offsetY={-60}
       />
+
       <TrailAnimation />
-      <div style={{ position: "relative", minHeight: "100vh" }}>
+      <div style={{ position: "relative" }}>
         <Welcome />
       </div>
+      <Countdown />
 
-      <div style={{ position: "relative", padding: "0 20px 20px" }}>
+      <div style={{ position: "relative", padding: "0 20px 0px" }}>
         <WeddingEvents />
       </div>
-      <div style={{ position: "relative" }}>
-        <BackgroundSlider />
-      </div>
+
       <Separador
         src="/icons/flowers.png"
         position="right"
         overlap={160}
         width={250}
         offsetX={120}
-        offsetY={-120}
+        offsetY={-16}
       />
+
+      <div style={{ position: "relative" }}>
+        <BackgroundSlider />
+      </div>
+      <Separador
+        src="/icons/flowers.png"
+        position="left"
+        flipY
+        overlap={200}
+        width={300}
+        offsetX={-180}
+        offsetY={-150}
+      />
+
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <FamilySection />
       </div>
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <Itinerary />
       </div>
+
+      <Separador
+        src="/icons/flowers.png"
+        position="right"
+        overlap={160}
+        width={250}
+        offsetX={120}
+        offsetY={-16}
+      />
       <div style={{ position: "relative" }}>
         <Viewpages />
       </div>
+      <Separador
+        src="/icons/flowers.png"
+        position="left"
+        flipY
+        overlap={200}
+        width={300}
+        offsetX={-180}
+        offsetY={-150}
+      />
+
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <DressCode />
       </div>
-      <div style={{ position: "relative", padding: "0 20px 20px" }}>
-        <Restrictions />
-      </div>
+
+      <Separador
+        src="/icons/flowers.png"
+        position="right"
+        overlap={120}
+        width={250}
+        offsetX={180}
+        offsetY={-50}
+      />
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <Gifts />
       </div>
-      <div style={{ position: "relative", padding: "0 20px 20px" }}>
+
+      <div style={{ position: "relative", padding: "0 20px 0px" }}>
+        <Restrictions />
+      </div>
+
+      <Separador
+        src="/icons/flowers.png"
+        position="right"
+        overlap={160}
+        width={250}
+        offsetX={120}
+        offsetY={-16}
+      />
+      <div style={{ position: "relative" }}>
         <ImagenFinal />
       </div>
+      <Separador
+        src="/icons/flowers.png"
+        position="left"
+        flipY
+        overlap={180}
+        width={300}
+        offsetX={-180}
+        offsetY={-150}
+      />
 
       {/* Formulario solo recibe lo que necesit */}
       <div style={{ position: "relative", zIndex: 2, padding: "0 20px 20px" }}>
