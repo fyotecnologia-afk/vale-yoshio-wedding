@@ -13,7 +13,7 @@ const cardStyle: React.CSSProperties = {
 
 const imageStyle: React.CSSProperties = {
   width: "100%",
-  height: "40vw", // relativo al ancho de la ventana
+  height: "20vw", // relativo al ancho de la ventana
   maxHeight: "300px", // límite en pantallas grandes
   borderRadius: 6,
   objectFit: "contain",
@@ -84,7 +84,8 @@ function formatLongDate(dateString: string) {
 }
 
 const CeremonyCard: React.FC<{ ceremony: any }> = ({ ceremony }) => (
-  <Card hoverable style={cardStyle}>
+  <Card style={cardStyle}>
+    <img src={ceremony.imgUrl} alt={ceremony.title} style={imageStyle} />
     <Title
       level={4}
       style={{ textAlign: "center", margin: 0, color: "#7a8b75" }}
@@ -92,7 +93,7 @@ const CeremonyCard: React.FC<{ ceremony: any }> = ({ ceremony }) => (
     >
       {ceremony.title}
     </Title>
-    <img src={ceremony.imgUrl} alt={ceremony.title} style={imageStyle} />
+
     <Text
       strong
       style={{
@@ -138,7 +139,8 @@ const CeremonyCard: React.FC<{ ceremony: any }> = ({ ceremony }) => (
 );
 
 const ReceptionCard: React.FC<{ reception: any }> = ({ reception }) => (
-  <Card hoverable style={cardStyle}>
+  <Card style={cardStyle}>
+    <img src={reception.imgUrl} alt={reception.title} style={imageStyle} />
     <Title
       level={4}
       style={{ textAlign: "center", margin: 0, color: "#7a8b75" }}
@@ -146,7 +148,6 @@ const ReceptionCard: React.FC<{ reception: any }> = ({ reception }) => (
     >
       {reception.title}
     </Title>
-    <img src={reception.imgUrl} alt={reception.title} style={imageStyle} />
     <Text
       strong
       style={{
@@ -195,7 +196,7 @@ const WeddingSchedule: React.FC = () => {
   const data = weddingData as any;
 
   return (
-    <div className="font-manjari" style={{ paddingTop: 20 }}>
+    <div className="font-manjari">
       {/* <Title level={2} className="title-decorative">
         ¿Cuándo y dónde?
       </Title> */}

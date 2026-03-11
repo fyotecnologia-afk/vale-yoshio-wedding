@@ -57,7 +57,7 @@ export default function ConfirmacionPage() {
     <main style={{ position: "relative", overflow: "hidden" }}>
       <MusicPlayer src="/music/cancion.mp3" />
 
-      <Separador
+      {/* <Separador
         src="/icons/flowers.png"
         position="left"
         flipY
@@ -65,31 +65,31 @@ export default function ConfirmacionPage() {
         width={350}
         offsetX={-163}
         offsetY={-60}
-      />
+      /> */}
 
-      <TrailAnimation />
-      <div style={{ position: "relative" }}>
+      <div style={{ position: "relative", padding: "20px 0 0 0" }}>
         <Welcome />
       </div>
       <Countdown />
+      <TrailAnimation />
 
       <div style={{ position: "relative", padding: "0 20px 0px" }}>
         <WeddingEvents />
       </div>
 
-      <Separador
+      {/* <Separador
         src="/icons/flowers.png"
         position="right"
         overlap={160}
         width={250}
         offsetX={120}
         offsetY={-16}
-      />
+      /> */}
 
       <div style={{ position: "relative" }}>
         <BackgroundSlider />
       </div>
-      <Separador
+      {/* <Separador
         src="/icons/flowers.png"
         position="left"
         flipY
@@ -97,7 +97,7 @@ export default function ConfirmacionPage() {
         width={300}
         offsetX={-180}
         offsetY={-150}
-      />
+      /> */}
 
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <FamilySection />
@@ -106,18 +106,18 @@ export default function ConfirmacionPage() {
         <Itinerary />
       </div>
 
-      <Separador
+      {/* <Separador
         src="/icons/flowers.png"
         position="right"
         overlap={160}
         width={250}
         offsetX={120}
         offsetY={-16}
-      />
+      /> */}
       <div style={{ position: "relative" }}>
         <Viewpages />
       </div>
-      <Separador
+      {/* <Separador
         src="/icons/flowers.png"
         position="left"
         flipY
@@ -125,20 +125,20 @@ export default function ConfirmacionPage() {
         width={300}
         offsetX={-180}
         offsetY={-150}
-      />
+      /> */}
 
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <DressCode />
       </div>
 
-      <Separador
+      {/* <Separador
         src="/icons/flowers.png"
         position="right"
         overlap={120}
         width={250}
         offsetX={180}
         offsetY={-50}
-      />
+      /> */}
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <Gifts />
       </div>
@@ -147,18 +147,18 @@ export default function ConfirmacionPage() {
         <Restrictions />
       </div>
 
-      <Separador
+      {/* <Separador
         src="/icons/flowers.png"
         position="right"
         overlap={160}
         width={250}
         offsetX={120}
         offsetY={-16}
-      />
+      /> */}
       <div style={{ position: "relative" }}>
         <ImagenFinal />
       </div>
-      <Separador
+      {/* <Separador
         src="/icons/flowers.png"
         position="left"
         flipY
@@ -166,7 +166,7 @@ export default function ConfirmacionPage() {
         width={300}
         offsetX={-180}
         offsetY={-150}
-      />
+      /> */}
 
       {/* Formulario solo recibe lo que necesit */}
       <div style={{ position: "relative", zIndex: 2, padding: "0 20px 20px" }}>

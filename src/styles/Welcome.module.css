@@ -63,3 +63,52 @@
   bottom: -2px;
   filter: drop-shadow(0 -5px 10px rgba(0, 0, 0, 1.5));
 }
+
+.dateWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(15px, 5vw, 50px);
+  margin: 40px 0;
+}
+
+/* bloques laterales */
+.dateBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* líneas */
+.line {
+  width: 7em;
+  height: 1px;
+  background: #444;
+  opacity: 0.6;
+}
+
+/* textos laterales */
+.weekday,
+.year {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  letter-spacing: 3px;
+}
+
+/* centro */
+.dateCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month {
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  letter-spacing: 3px;
+}
+
+.day {
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  line-height: 1;
+  font-weight: 500;
+}
