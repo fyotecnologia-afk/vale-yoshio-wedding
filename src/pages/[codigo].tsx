@@ -5,23 +5,19 @@ import { useEffect, useState } from "react";
 // Componentes
 import Welcome from "@/components/invitation/Welcome";
 import TrailAnimation from "@/components/invitation/TrailAnimation";
-import Masonry from "@/components/invitation/Masonry";
 import BackgroundSlider from "@/components/invitation/BackgroundSlider";
 import Viewpages from "@/components/invitation/Viewpages";
 import Formulario from "@/components/invitation/FormularioConfirmacion";
 import WeddingEvents from "@/components/invitation/WeddingEvents";
-import HotelSuggestions from "@/components/invitation/HotelSuggestions";
 import Spinner from "@/components/invitation/Spinner";
 import FamilySection from "@/components/invitation/FamilySection";
 import MusicPlayer from "@/components/invitation/MusicPlayer";
-import Makeup from "@/components/invitation/Makeup";
-import RentCars from "@/components/invitation/RentCars";
 import Itinerary from "@/components/invitation/Itinerary";
 import Gifts from "@/components/invitation/Gifts";
 import DressCode from "@/components/invitation/DressCode";
 import Restrictions from "@/components/invitation/Restrictions";
-import Slider2 from "@/components/invitation/Slider2";
 import ImagenFinal from "@/components/invitation/ImagenFinal";
+import Separador from "@/components/invitation/Separador";
 
 // Tipado
 type DataResponse = {
@@ -60,11 +56,19 @@ export default function ConfirmacionPage() {
     <main style={{ position: "relative", overflow: "hidden" }}>
       <MusicPlayer src="/music/cancion.mp3" />
 
+      <Separador
+        src="/icons/flowers.png"
+        position="left"
+        flipY
+        overlap={100}
+        width={350}
+        offsetX={-163}
+        offsetY={-60}
+      />
+      <TrailAnimation />
       <div style={{ position: "relative", minHeight: "100vh" }}>
         <Welcome />
       </div>
-
-      <TrailAnimation />
 
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <WeddingEvents />
@@ -72,6 +76,14 @@ export default function ConfirmacionPage() {
       <div style={{ position: "relative" }}>
         <BackgroundSlider />
       </div>
+      <Separador
+        src="/icons/flowers.png"
+        position="right"
+        overlap={150}
+        width={250}
+        offsetX={120}
+        offsetY={-100}
+      />
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <FamilySection />
       </div>

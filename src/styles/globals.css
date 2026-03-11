@@ -16,7 +16,7 @@ body,
 main {
   font-family: var(--font-manjari) !important;
   color: rgb(141, 144, 125);
-  background-color: white !important;
+  background-color: rgba(238, 239, 234) !important;
 }
 
 .title-decorative {
@@ -66,28 +66,3 @@ span {
 .custom-family-card .ant-card-body {
   padding: 0;
 }
-
-/* a,
-a:link {
-  color: #7a8b75 !important;
-  text-decoration: none !important;
-  outline: none !important;
-}
-
-a:visited {
-  color: #5f6f5d !important;
-}
-
-a:hover {
-  color: #98a88f !important;
-  text-decoration: underline !important;
-}
-
-a:active {
-  color: #4d5b4a !important;
-}
-
-a:focus {
-  color: #7a8b75 !important;
-  border-bottom: 1px dotted #7a8b75 !important;
-} */

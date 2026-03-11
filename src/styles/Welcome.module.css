@@ -13,18 +13,18 @@
   font-family: var(--font-meow);
   font-weight: 200;
   color: rgb(141, 144, 125);
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: 3.3rem;
   margin: 0;
 }
 
 .subtitle {
   color: rgb(141, 144, 125);
-  font-size: 0.7rem;
-  font-weight: 100;
-  margin: 0;
-  margin-top: clamp(-12px, 5vw, -23px);
-  margin-bottom: clamp(8px, 5vw, 0px);
-  margin-left: clamp(16px, 5vw, 16px);
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+.date {
+  font-size: 1.1rem;
 }
 
 .imageWrapper {
@@ -49,6 +49,7 @@
   width: calc(100% + 4px);
   pointer-events: none;
   z-index: 2;
+  color: rgba(238, 239, 234) !important;
 }
 
 .tornTop {
@@ -58,9 +59,4 @@
 
 .tornBottom {
   bottom: -2px;
-}
-
-.date {
-  font-size: 1.5rem;
-  margin: 15px 0 0 0;
 }

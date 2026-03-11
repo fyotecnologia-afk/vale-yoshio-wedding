@@ -1,0 +1,23 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.center {
+  justify-content: center;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.wrapper img {
+  display: block;
+}
