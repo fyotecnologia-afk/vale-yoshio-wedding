@@ -32,7 +32,7 @@ interface InvitacionData {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<{ datos?: InvitacionData[]; error?: string }>
+  res: NextApiResponse<{ datos?: InvitacionData[]; error?: string }>,
 ) {
   try {
     const invitaciones = await db.invitacion.findMany({
@@ -51,7 +51,9 @@ export default async function handler(
 
     console.log("Invitaciones encontradas:", invitaciones.length);
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+    const protocol = req.headers["x-forwarded-proto"] || "http";
+    const host = req.headers.host;
+    const baseUrl = `${protocol}://${host}`;
 
     const datos: InvitacionData[] = invitaciones.map((inv) => {
       const codigo = Buffer.from(inv.numero).toString("base64");
