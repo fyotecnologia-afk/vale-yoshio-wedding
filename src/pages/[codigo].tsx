@@ -84,10 +84,10 @@ export default function ConfirmacionPage() {
         src="/icons/separadores/laurel.png"
         position="right"
         flipY
-        overlap={150}
+        overlap={210}
         width={350}
         offsetX={150}
-        offsetY={70}
+        offsetY={10}
         rotate={50}
         layer="back"
       />
@@ -97,7 +97,7 @@ export default function ConfirmacionPage() {
         overlap={150}
         width={350}
         offsetX={-150}
-        offsetY={470}
+        offsetY={460}
         rotate={50}
         flipX
         layer="back"
