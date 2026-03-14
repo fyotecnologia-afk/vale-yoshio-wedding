@@ -21,7 +21,10 @@ interface ItineraryItem {
   description?: string;
 }
 
-const icons = ["/icons/iglesia-icono-2.png", "/icons/icono-brindis-click.png"];
+const icons = [
+  "/icons/iglesia-icono-2.webp",
+  "/icons/icono-brindis-click.webp",
+];
 
 const ItineraryTimeline: React.FC = () => {
   const items: ItineraryItem[] = weddingData.itinerary;

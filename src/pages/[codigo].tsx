@@ -71,7 +71,7 @@ export default function ConfirmacionPage() {
         <BackgroundSlider />
       </div>
       {/* <Separador
-        src="/icons/flowers.png"
+        src="/icons/flowers.webp"
         position="left"
         flipY
         overlap={200}
@@ -81,7 +81,7 @@ export default function ConfirmacionPage() {
       /> */}
 
       <Separador
-        src="/icons/separadores/laurel.png"
+        src="/icons/separadores/laurel.webp"
         position="right"
         flipY
         overlap={210}
@@ -92,7 +92,7 @@ export default function ConfirmacionPage() {
         layer="back"
       />
       <Separador
-        src="/icons/separadores/laurel.png"
+        src="/icons/separadores/laurel.webp"
         position="left"
         overlap={150}
         width={350}
@@ -111,7 +111,7 @@ export default function ConfirmacionPage() {
       </div>
 
       {/* <Separador
-        src="/icons/flowers.png"
+        src="/icons/flowers.webp"
         position="right"
         overlap={160}
         width={250}
@@ -122,7 +122,7 @@ export default function ConfirmacionPage() {
         <Viewpages />
       </div>
       {/* <Separador
-        src="/icons/flowers.png"
+        src="/icons/flowers.webp"
         position="left"
         flipY
         overlap={200}
@@ -136,7 +136,7 @@ export default function ConfirmacionPage() {
       </div>
 
       <Separador
-        src="/icons/separadores/separador.png"
+        src="/icons/separadores/separador.webp"
         position="center"
         overlap={0}
         width={150}
@@ -152,7 +152,7 @@ export default function ConfirmacionPage() {
       </div>
 
       {/* <Separador
-        src="/icons/flowers.png"
+        src="/icons/flowers.webp"
         position="right"
         overlap={160}
         width={250}
@@ -163,7 +163,7 @@ export default function ConfirmacionPage() {
         <ImagenFinal />
       </div>
       {/* <Separador
-        src="/icons/flowers.png"
+        src="/icons/flowers.webp"
         position="left"
         flipY
         overlap={180}
