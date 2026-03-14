@@ -16,9 +16,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY001",
-    "familia": "Ruiz Vázquez",
+    "familia": "Familia Ruiz Vázquez",
     "invitados": [
       {
         "nombre": "Margarita Ruiz",
@@ -28,7 +28,14 @@ export const seedData = [
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Silvio  Vázquez",
+        "nombre": "Silvio Vázquez",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Noé Vázquez",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -38,13 +45,20 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY002",
-    "familia": "Vázquez",
+    "familia": "Familia Sánchez Rendón",
     "invitados": [
       {
-        "nombre": "Noé  Vázquez",
+        "nombre": "Jasiel Sánchez",
         "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Romina Rendón",
+        "principal": false,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
@@ -53,19 +67,26 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY003",
-    "familia": "Sánchez",
+    "familia": "Familia Vázquez López",
     "invitados": [
       {
-        "nombre": "Jasiel  Sánchez",
+        "nombre": "RosaIsela Vázquez",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Romina  Rendón",
+        "nombre": "Betzabeth López",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Rachel López",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -75,26 +96,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY004",
-    "familia": "Vázquez",
+    "familia": "Familia Nájera Vázquez",
     "invitados": [
       {
-        "nombre": "Rosa Isela  Vázquez",
+        "nombre": "Patricio Nájera",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Betzabeth  López",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Rachel  López",
+        "nombre": "Mercedes Vázquez",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -104,19 +118,26 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY005",
-    "familia": "Nájera",
+    "familia": "Familia Nájera Cervantes",
     "invitados": [
       {
-        "nombre": "Patricio  Nájera",
+        "nombre": "Jesús Nájera",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Mercedes  Vázquez",
+        "nombre": "Araceli Cervantes",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Gael Cervantes",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -126,26 +147,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY006",
-    "familia": "Nájera",
+    "familia": "Familia Moreno Benítez",
     "invitados": [
       {
-        "nombre": "Jesús  Nájera",
+        "nombre": "Alejo Moreno",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Araceli  Cervantes",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Gael  Cervantes",
+        "nombre": "Blanca Benítez",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -155,19 +169,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY007",
-    "familia": "Moreno",
+    "familia": "Familia García Fernández",
     "invitados": [
       {
-        "nombre": "Alejo  Moreno",
+        "nombre": "Alfredo García",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Blanca  Benítez",
+        "nombre": "Mabel Fernández de Lara",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -177,19 +191,26 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY008",
-    "familia": "García",
+    "familia": "Familia Gómez Nájera",
     "invitados": [
       {
-        "nombre": "Alfredo  García",
+        "nombre": "Felipe Gómez",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Mabel  Fernández de Lara",
+        "nombre": "Bricia Nájera",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Estefania Gómez",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -199,38 +220,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY009",
-    "familia": "Gómez",
-    "invitados": [
-      {
-        "nombre": "Felipe  Gómez",
-        "principal": true,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Bricia  Nájera",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Estefania   Gómez",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      }
-    ]
-  },
-  {
-    "hostedBy": "NOVIO",
-    "tipo": "Familiar",
-    "numero": "VY010",
-    "familia": "Pacheco",
+    "familia": "Familia Pacheco Pacheco",
     "invitados": [
       {
         "nombre": "Carlos Pacheco",
@@ -240,7 +232,7 @@ export const seedData = [
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Adriana  Pacheco",
+        "nombre": "Adriana Pacheco",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -261,14 +253,14 @@ export const seedData = [
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Eduardo  Pacheco",
+        "nombre": "Eduardo Pacheco",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Luis  Pacheco",
+        "nombre": "Luis Pacheco",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -278,19 +270,41 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
+    "numero": "VY010",
+    "familia": "Familia Manzano Rios",
+    "invitados": [
+      {
+        "nombre": "Andrés Manzano",
+        "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Norma Rios",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      }
+    ]
+  },
+  {
+    "hostedBy": "NOVIO",
+    "tipo": "FAMILIAR",
     "numero": "VY011",
-    "familia": "Manzano",
+    "familia": "Familia Nájera Santacruz",
     "invitados": [
       {
-        "nombre": "Andrés  Manzano",
+        "nombre": "Cándido Nájera",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Norma   Rios",
+        "nombre": "Lourdes Santacruz",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -300,19 +314,33 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY012",
-    "familia": "Nájera",
+    "familia": "Familia Nájera Rivera",
     "invitados": [
       {
-        "nombre": "Cándido  Nájera",
+        "nombre": "Alfonso Nájera",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Lourdes  Santacruz",
+        "nombre": "Ana Rivera",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Nayeli Nájera",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Vanessa Nájera",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -322,33 +350,26 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY013",
-    "familia": "Nájera",
+    "familia": "Familia Nájera González",
     "invitados": [
       {
-        "nombre": "Alfonso  Nájera",
+        "nombre": "Andrés Nájera",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Ana  Rivera",
+        "nombre": "Olga González",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Nayeli  Nájera",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Vanessa  Nájera",
+        "nombre": "Ismael Nájera",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -358,41 +379,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY014",
-    "familia": "Nájera",
+    "familia": "Familia Nájera Gálvez",
     "invitados": [
       {
-        "nombre": "Andrés  Nájera",
-        "principal": true,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Olga  González",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Ismael  Nájera",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      }
-    ]
-  },
-  {
-    "hostedBy": "NOVIO",
-    "tipo": "Familiar",
-    "numero": "VY015",
-    "familia": "Nájera",
-    "invitados": [
-      {
-        "nombre": "Gaspar  Nájera",
+        "nombre": "Gaspar Nájera",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -406,7 +398,7 @@ export const seedData = [
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Gabriel  Nájera",
+        "nombre": "Gabriel Nájera",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -416,19 +408,41 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
+    "numero": "VY015",
+    "familia": "Familia Islas Paleta",
+    "invitados": [
+      {
+        "nombre": "Yair Islas",
+        "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Karla Paleta",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      }
+    ]
+  },
+  {
+    "hostedBy": "NOVIO",
+    "tipo": "FAMILIAR",
     "numero": "VY016",
-    "familia": "islas",
+    "familia": "Familia Vital Gómez",
     "invitados": [
       {
-        "nombre": "Yair islas",
+        "nombre": "Abel Vital",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Karla  paleta",
+        "nombre": "Kenia Gómez",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -438,19 +452,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY017",
-    "familia": "vital",
+    "familia": "Familia Nájera Peregrina",
     "invitados": [
       {
-        "nombre": "Abel vital",
+        "nombre": "Xavier Nájera",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Kenia  Gómez",
+        "nombre": "Mariana Peregrina",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -460,19 +474,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY018",
-    "familia": "Nájera",
+    "familia": "Familia Morales Nájera",
     "invitados": [
       {
-        "nombre": "Xavier  Nájera",
+        "nombre": "Emmanuel Morales",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Mariana peregrina",
+        "nombre": "Jenny Nájera",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -482,19 +496,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY019",
-    "familia": "morales",
+    "familia": "Familia Aparicio Nájera",
     "invitados": [
       {
-        "nombre": "Emmanuel morales",
+        "nombre": "Jorge Aparicio",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Jenny  Nájera",
+        "nombre": "Ana María Nájera",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -504,19 +518,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY020",
-    "familia": "Aparicio",
+    "familia": "Familia Saroman Sánchez",
     "invitados": [
       {
-        "nombre": "Jorge  Aparicio",
+        "nombre": "Itzamna Saroman",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Ana María  Nájera",
+        "nombre": "Laura Sánchez",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -526,19 +540,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY021",
-    "familia": "saroman",
+    "familia": "Familia Figueroa Tianguistengo",
     "invitados": [
       {
-        "nombre": "Itzamna  saroman",
+        "nombre": "Zamir Figueroa",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Laura  sanchez",
+        "nombre": "Mayra Tianguistengo",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -548,31 +562,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY022",
-    "familia": "Figueroa",
-    "invitados": [
-      {
-        "nombre": "Zamir  Figueroa",
-        "principal": true,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Mayra tianguistengo",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      }
-    ]
-  },
-  {
-    "hostedBy": "NOVIO",
-    "tipo": "Familiar",
-    "numero": "VY023",
-    "familia": "Pérez",
+    "familia": "Familia Pérez Suastegui",
     "invitados": [
       {
         "nombre": "Gustavo Pérez",
@@ -580,17 +572,39 @@ export const seedData = [
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Blanca Suastegui",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
       }
     ]
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
+    "numero": "VY023",
+    "familia": "Familia Cervantes López",
+    "invitados": [
+      {
+        "nombre": "Alexis Cervantes",
+        "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      }
+    ]
+  },
+  {
+    "hostedBy": "NOVIO",
+    "tipo": "FAMILIAR",
     "numero": "VY024",
-    "familia": "cervantes",
+    "familia": "Familia López Vázquez",
     "invitados": [
       {
-        "nombre": "Alexis  cervantes",
+        "nombre": "Diego López",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -600,13 +614,20 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY025",
-    "familia": "lopez",
+    "familia": "Familia Vázquez Márquez",
     "invitados": [
       {
-        "nombre": "Diego lopez",
+        "nombre": "Gabriel Vázquez",
         "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Beatriz Márquez",
+        "principal": false,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
@@ -615,26 +636,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY026",
-    "familia": "Vázquez",
+    "familia": "Familia Piña Sánchez",
     "invitados": [
       {
-        "nombre": "Gabriel  Vázquez",
+        "nombre": "Yahir Piña",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Beatriz  Márquez",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Luis Méndez",
+        "nombre": "Kenya Sánchez",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -644,31 +658,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY027",
-    "familia": "piña",
-    "invitados": [
-      {
-        "nombre": "Yahir  piña",
-        "principal": true,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Kenya  sanchez",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      }
-    ]
-  },
-  {
-    "hostedBy": "NOVIO",
-    "tipo": "Familiar",
-    "numero": "VY028",
-    "familia": "Gómez",
+    "familia": "Familia Gómez Trejo",
     "invitados": [
       {
         "nombre": "Javier Gómez",
@@ -681,12 +673,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
-    "numero": "VY029",
-    "familia": "Trejo",
+    "tipo": "FAMILIAR",
+    "numero": "VY028",
+    "familia": "Familia Trejo Martínez",
     "invitados": [
       {
-        "nombre": "Hugo Moisés  Trejo",
+        "nombre": "Hugo Moisés Trejo",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -696,9 +688,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
-    "numero": "VY030",
-    "familia": "Martínez",
+    "tipo": "FAMILIAR",
+    "numero": "VY029",
+    "familia": "Familia Martínez Vargas",
     "invitados": [
       {
         "nombre": "Irvin Martínez",
@@ -711,19 +703,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
-    "numero": "VY031",
-    "familia": "Vargas",
+    "tipo": "FAMILIAR",
+    "numero": "VY030",
+    "familia": "Familia Vargas Cortes",
     "invitados": [
       {
-        "nombre": "Marco Antonio  Vargas",
+        "nombre": "Marco Antonio Vargas",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Angelica cortes",
+        "nombre": "Angelica Cortes",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -733,12 +725,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
-    "numero": "VY032",
-    "familia": "Vázquez",
+    "tipo": "FAMILIAR",
+    "numero": "VY031",
+    "familia": "Familia Vázquez Nipp",
     "invitados": [
       {
-        "nombre": "Miguel Ángel  Vázquez",
+        "nombre": "Miguel Ángel Vázquez",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -748,9 +740,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
-    "numero": "VY033",
-    "familia": "Nipp",
+    "tipo": "FAMILIAR",
+    "numero": "VY032",
+    "familia": "Familia Nipp Segundo",
     "invitados": [
       {
         "nombre": "Marc Nipp",
@@ -760,7 +752,7 @@ export const seedData = [
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Verónica  segundo",
+        "nombre": "Verónica Segundo",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -770,9 +762,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIO",
-    "tipo": "Familiar",
-    "numero": "VY034",
-    "familia": "Ramírez",
+    "tipo": "FAMILIAR",
+    "numero": "VY033",
+    "familia": "Familia Ramírez",
     "invitados": [
       {
         "nombre": "Alberto Ramírez",
@@ -796,7 +788,7 @@ export const seedData = [
         "estado": "ACTIVO"
       },
       {
-        "nombre": "José Alberto  Salas",
+        "nombre": "José Alberto Salas",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -805,13 +797,28 @@ export const seedData = [
     ]
   },
   {
+    "hostedBy": "NOVIO",
+    "tipo": "FAMILIAR",
+    "numero": "VY034",
+    "familia": "Familia Méndez Meza",
+    "invitados": [
+      {
+        "nombre": "Luis Méndez",
+        "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      }
+    ]
+  },
+  {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY035",
-    "familia": "Meza",
+    "familia": "Familia Meza Jiménez",
     "invitados": [
       {
-        "nombre": "Lourdes  Meza",
+        "nombre": "Lourdes Meza",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -821,12 +828,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY036",
-    "familia": "Jiménez",
+    "familia": "Familia Jiménez Maldonado",
     "invitados": [
       {
-        "nombre": "Jesús  Jiménez",
+        "nombre": "Jesús Jiménez",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -836,19 +843,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY037",
-    "familia": "Maldonado",
+    "familia": "Familia Maldonado Huerta",
     "invitados": [
       {
-        "nombre": "Vianey  Maldonado",
+        "nombre": "Vianey Maldonado",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Nadia  Huerta",
+        "nombre": "Nadia Huerta",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -858,12 +865,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY038",
-    "familia": "Maldonado",
+    "familia": "Familia Maldonado Meza",
     "invitados": [
       {
-        "nombre": "Aranza  Maldonado",
+        "nombre": "Aranza Maldonado",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -873,26 +880,26 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY039",
-    "familia": "Meza",
+    "familia": "Familia Meza Meza",
     "invitados": [
       {
-        "nombre": "Guadalupe  Meza",
+        "nombre": "Guadalupe Meza",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Francisco  Meza",
+        "nombre": "Francisco Meza",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Alejandra   Lumbreras",
+        "nombre": "Alejandra Lumbreras",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -902,9 +909,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY040",
-    "familia": "Acevedo",
+    "familia": "Familia Acevedo Pérez",
     "invitados": [
       {
         "nombre": "Misael Acevedo",
@@ -914,14 +921,7 @@ export const seedData = [
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Diana Perez",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Ofelia  Meza",
+        "nombre": "Diana Pérez",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -931,19 +931,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY041",
-    "familia": "Flores",
+    "familia": "Familia Flores Meza",
     "invitados": [
       {
-        "nombre": "Javier  Flores",
+        "nombre": "Javier Flores",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Areli   Flores",
+        "nombre": "Ofelia Meza",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -953,19 +953,26 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY042",
-    "familia": "Cholula",
+    "familia": "Familia Cholula Flores",
     "invitados": [
       {
-        "nombre": "Jesús  Cholula",
+        "nombre": "Jesús Cholula",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Patricia  Guerrero",
+        "nombre": "Areli Flores",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Patricia Guerrero",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -975,19 +982,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY043",
-    "familia": "Flores",
+    "familia": "Familia Flores García",
     "invitados": [
       {
-        "nombre": "Nayeli  Flores",
+        "nombre": "Nayeli Flores",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Antonio  García",
+        "nombre": "Antonio García",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -997,12 +1004,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY044",
-    "familia": "Meza",
+    "familia": "Familia Meza Meza",
     "invitados": [
       {
-        "nombre": "José Luis   Meza",
+        "nombre": "JoséLuis Meza",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1019,12 +1026,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY045",
-    "familia": "Meza",
+    "familia": "Familia Meza García",
     "invitados": [
       {
-        "nombre": "Irma  Meza",
+        "nombre": "Irma Meza",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1034,12 +1041,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY046",
-    "familia": "García",
+    "familia": "Familia García García",
     "invitados": [
       {
-        "nombre": "46204  García",
+        "nombre": "Julio García",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1049,19 +1056,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY047",
-    "familia": "García",
+    "familia": "Familia García Acompañante",
     "invitados": [
       {
-        "nombre": "Brenda  García",
+        "nombre": "Brenda García",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Acompañante   Acompañante",
+        "nombre": "Acompañante",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -1071,9 +1078,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY048",
-    "familia": "García",
+    "familia": "Familia García Villar",
     "invitados": [
       {
         "nombre": "Abril García",
@@ -1083,7 +1090,7 @@ export const seedData = [
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Jonathan   Villar",
+        "nombre": "Jonathan Villar",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -1093,12 +1100,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY049",
-    "familia": "Meza",
+    "familia": "Familia Meza Ramírez",
     "invitados": [
       {
-        "nombre": "Esther   Meza",
+        "nombre": "Esther Meza",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1108,12 +1115,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY050",
-    "familia": "Ramírez",
+    "familia": "Familia Ramírez Tepanecatl",
     "invitados": [
       {
-        "nombre": "Patricia    Ramírez",
+        "nombre": "Patricia Ramírez",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1123,12 +1130,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY051",
-    "familia": "tepanecatl",
+    "familia": "Familia Tepanecatl Maldonado",
     "invitados": [
       {
-        "nombre": "Carmela  tepanecatl",
+        "nombre": "Carmela Tepanecatl",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1138,12 +1145,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY052",
-    "familia": "Maldonado",
+    "familia": "Familia Maldonado Maldonado",
     "invitados": [
       {
-        "nombre": "José Rafael  Maldonado",
+        "nombre": "José Rafael Maldonado",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1152,20 +1159,27 @@ export const seedData = [
     ]
   },
   {
-    "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "hostedBy": "Novia",
+    "tipo": "FAMILIAR",
     "numero": "VY053",
-    "familia": "Calderón",
+    "familia": "Familia Maldonado Moreno",
     "invitados": [
       {
-        "nombre": "Víctor   Calderón",
+        "nombre": "Isabel Maldonado",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Laura   cruz",
+        "nombre": "Javier Moreno",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Karen Anzaldo",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -1175,40 +1189,40 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY054",
-    "familia": "Maldonado",
+    "familia": "Familia Maldonado Juárez",
     "invitados": [
       {
-        "nombre": "Joaquín   Maldonado",
+        "nombre": "Joaquín Maldonado",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Teodora  Juárez",
+        "nombre": "Teodora Juárez",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Karla   Maldonado",
+        "nombre": "Karla Maldonado",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Kevin   Roldán",
+        "nombre": "Kevin Roldán",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Cesar   Maldonado",
+        "nombre": "Cesar Maldonado",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -1218,26 +1232,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY055",
-    "familia": "Maldonado",
+    "familia": "Familia Maldonado López",
     "invitados": [
       {
-        "nombre": "Genaro  Maldonado",
+        "nombre": "Genaro Maldonado",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Cristina  López",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Mayra   Moreno",
+        "nombre": "Cristina López",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -1247,9 +1254,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY056",
-    "familia": "Ventura",
+    "familia": "Familia Ventura Moreno",
     "invitados": [
       {
         "nombre": "Francisco Ventura",
@@ -1257,17 +1264,24 @@ export const seedData = [
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Mayra Moreno",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
       }
     ]
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY057",
-    "familia": "Maldonado",
+    "familia": "Familia Maldonado Ortega",
     "invitados": [
       {
-        "nombre": "Teresa  Maldonado",
+        "nombre": "Teresa Maldonado",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1277,13 +1291,20 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY058",
-    "familia": "Maldonado",
+    "familia": "Familia Ortega Cuautle",
     "invitados": [
       {
-        "nombre": "Isabel   Maldonado",
+        "nombre": "Alicia Ortega",
         "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Fernando Cuautle",
+        "principal": false,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
@@ -1292,19 +1313,33 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY059",
-    "familia": "Ortega",
+    "familia": "Familia Lozano Valencia",
     "invitados": [
       {
-        "nombre": "Alicia   Ortega",
+        "nombre": "Javier Lozano",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Fernando   Cuautle",
+        "nombre": "Clara Valencia",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Javier Lozano Valencia",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Clara Lozano Valencia",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -1314,40 +1349,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY060",
-    "familia": "lozano",
+    "familia": "Familia Bautista Jiménez",
     "invitados": [
       {
-        "nombre": "Javier  lozano",
+        "nombre": "Daniel Bautista",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Clara    valencia",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Javier  lozano valencia",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Clara lozano valencia",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Alice  Jiménez",
+        "nombre": "Alice Jiménez",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -1357,34 +1371,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY061",
-    "familia": "Bautista",
+    "familia": "Familia Bazán Martínez",
     "invitados": [
       {
-        "nombre": "Daniel   Bautista",
-        "principal": true,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      }
-    ]
-  },
-  {
-    "hostedBy": "NOVIA",
-    "tipo": "Familiar",
-    "numero": "VY062",
-    "familia": "Bazán",
-    "invitados": [
-      {
-        "nombre": "Claudia  Bazán",
+        "nombre": "Claudia Bazán",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Luis Antonio   Martínez",
+        "nombre": "LuisAntonio Martínez",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -1394,12 +1393,27 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
+    "numero": "VY062",
+    "familia": "Familia Moreno Tapale",
+    "invitados": [
+      {
+        "nombre": "Perla Moreno",
+        "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      }
+    ]
+  },
+  {
+    "hostedBy": "NOVIA",
+    "tipo": "FAMILIAR",
     "numero": "VY063",
-    "familia": "moreno",
+    "familia": "Familia Tapale Vilchis",
     "invitados": [
       {
-        "nombre": "Perla   moreno",
+        "nombre": "CarlosEduardo Tapale",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1409,24 +1423,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY064",
-    "familia": "Tapale",
-    "invitados": [
-      {
-        "nombre": "Carlos Eduardo   Tapale",
-        "principal": true,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      }
-    ]
-  },
-  {
-    "hostedBy": "NOVIA",
-    "tipo": "Familiar",
-    "numero": "VY065",
-    "familia": "Vilchis",
+    "familia": "Familia Vilchis Díaz",
     "invitados": [
       {
         "nombre": "José Alberto Vilchis",
@@ -1439,12 +1438,27 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
+    "numero": "VY065",
+    "familia": "Familia Díaz Peral",
+    "invitados": [
+      {
+        "nombre": "Yadira Díaz",
+        "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      }
+    ]
+  },
+  {
+    "hostedBy": "NOVIA",
+    "tipo": "FAMILIAR",
     "numero": "VY066",
-    "familia": "Díaz",
+    "familia": "Familia Peral Flores",
     "invitados": [
       {
-        "nombre": "Yadira  Díaz",
+        "nombre": "Rafael Peral",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1454,12 +1468,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY067",
-    "familia": "Peral",
+    "familia": "Familia Flores Flores",
     "invitados": [
       {
-        "nombre": "Rafael   Peral",
+        "nombre": "Lizbeth Flores",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1469,13 +1483,20 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY068",
-    "familia": "Flores",
+    "familia": "Familia Flores Bocardo",
     "invitados": [
       {
-        "nombre": "Lizbeth  Flores",
+        "nombre": "Marlene Flores",
         "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Luis Bocardo",
+        "principal": false,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
@@ -1484,19 +1505,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY069",
-    "familia": "flores",
+    "familia": "Familia Méndez Valverde",
     "invitados": [
       {
-        "nombre": "Marlene   flores",
+        "nombre": "Alejandro Méndez",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Luis  bocardo",
+        "nombre": "Karina Valverde",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -1506,26 +1527,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY070",
-    "familia": "Méndez",
+    "familia": "Familia Cruz Meza",
     "invitados": [
       {
-        "nombre": "Alejandro  Méndez",
+        "nombre": "Hansen Cruz",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Karina  Valverde",
-        "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Fanny  Meza",
+        "nombre": "Fanny Meza",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -1535,19 +1549,19 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY071",
-    "familia": "Cruz",
+    "familia": "Familia García Medina",
     "invitados": [
       {
-        "nombre": "Hansen  Cruz",
+        "nombre": "Rasiel García",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Valeria   Medina",
+        "nombre": "Valeria Medina",
         "principal": false,
         "categoria": "ADULTO",
         "especial": false,
@@ -1557,27 +1571,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY072",
-    "familia": "García",
+    "familia": "Familia Cortés Aquino",
     "invitados": [
       {
-        "nombre": "Rasiel   García",
-        "principal": true,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      }
-    ]
-  },
-  {
-    "hostedBy": "NOVIA",
-    "tipo": "Familiar",
-    "numero": "VY073",
-    "familia": "Cortés",
-    "invitados": [
-      {
-        "nombre": "Luis Miguel  Cortés",
+        "nombre": "Miguel Cortés",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1594,12 +1593,27 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
+    "numero": "VY073",
+    "familia": "Familia Hernández Cuenca",
+    "invitados": [
+      {
+        "nombre": "Gildardo Hernández",
+        "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      }
+    ]
+  },
+  {
+    "hostedBy": "NOVIA",
+    "tipo": "FAMILIAR",
     "numero": "VY074",
-    "familia": "Hernández",
+    "familia": "Familia Cuenca García",
     "invitados": [
       {
-        "nombre": "Gildardo Antonio Gildardo Antonio Hernández",
+        "nombre": "Diana Cuenca",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1609,12 +1623,12 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY075",
-    "familia": "Arau",
+    "familia": "Familia García Miranda",
     "invitados": [
       {
-        "nombre": "Diana Diana cuenca Arau",
+        "nombre": "Alejandro García",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
@@ -1624,24 +1638,9 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY076",
-    "familia": "García",
-    "invitados": [
-      {
-        "nombre": "Alejandro  García",
-        "principal": true,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      }
-    ]
-  },
-  {
-    "hostedBy": "NOVIA",
-    "tipo": "Familiar",
-    "numero": "VY077",
-    "familia": "Miranda",
+    "familia": "Familia Miranda Hernández",
     "invitados": [
       {
         "nombre": "Isaac Miranda",
@@ -1654,20 +1653,35 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
+    "numero": "VY077",
+    "familia": "Familia Hernández Ramírez",
+    "invitados": [
+      {
+        "nombre": "Elías Hernández",
+        "principal": true,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      },
+      {
+        "nombre": "Claudia Ramírez",
+        "principal": false,
+        "categoria": "ADULTO",
+        "especial": false,
+        "estado": "ACTIVO"
+      }
+    ]
+  },
+  {
+    "hostedBy": "NOVIA",
+    "tipo": "FAMILIAR",
     "numero": "VY078",
-    "familia": "Hernández",
+    "familia": "Familia García Pliego",
     "invitados": [
       {
-        "nombre": "Elias  Hernández",
+        "nombre": "Erasmo García",
         "principal": true,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      },
-      {
-        "nombre": "Claudia  Ramírez",
-        "principal": false,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
@@ -1676,40 +1690,24 @@ export const seedData = [
   },
   {
     "hostedBy": "NOVIA",
-    "tipo": "Familiar",
+    "tipo": "FAMILIAR",
     "numero": "VY079",
-    "familia": "García",
+    "familia": "Familia Pliego Rosas",
     "invitados": [
       {
-        "nombre": "Erasmo  García",
+        "nombre": "Ulises Pliego",
         "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       },
       {
-        "nombre": "Lucero    rosas",
+        "nombre": "Lucero Rosas",
         "principal": false,
-        "categoria": "ADULTO",
-        "especial": false,
-        "estado": "ACTIVO"
-      }
-    ]
-  },
-  {
-    "hostedBy": "NOVIA",
-    "tipo": "Familiar",
-    "numero": "VY080",
-    "familia": "pliego",
-    "invitados": [
-      {
-        "nombre": "Ulises  pliego",
-        "principal": true,
         "categoria": "ADULTO",
         "especial": false,
         "estado": "ACTIVO"
       }
     ]
   }
-];
-// module.exports = { seedData };
+]

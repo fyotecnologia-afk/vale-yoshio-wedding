@@ -57,16 +57,6 @@ export default function ConfirmacionPage() {
     <main style={{ position: "relative", overflow: "hidden" }}>
       <MusicPlayer src="/music/cancion.mp3" />
 
-      {/* <Separador
-        src="/icons/flowers.png"
-        position="left"
-        flipY
-        overlap={60}
-        width={350}
-        offsetX={-163}
-        offsetY={-60}
-      /> */}
-
       <div style={{ position: "relative", padding: "20px 0 0 0" }}>
         <Welcome />
       </div>
@@ -76,15 +66,6 @@ export default function ConfirmacionPage() {
       <div style={{ position: "relative", padding: "0 20px 0px" }}>
         <WeddingEvents />
       </div>
-
-      {/* <Separador
-        src="/icons/flowers.png"
-        position="right"
-        overlap={160}
-        width={250}
-        offsetX={120}
-        offsetY={-16}
-      /> */}
 
       <div style={{ position: "relative" }}>
         <BackgroundSlider />
@@ -99,9 +80,32 @@ export default function ConfirmacionPage() {
         offsetY={-150}
       /> */}
 
+      <Separador
+        src="/icons/separadores/laurel.png"
+        position="right"
+        flipY
+        overlap={150}
+        width={350}
+        offsetX={150}
+        offsetY={70}
+        rotate={50}
+        layer="back"
+      />
+      <Separador
+        src="/icons/separadores/laurel.png"
+        position="left"
+        overlap={150}
+        width={350}
+        offsetX={-150}
+        offsetY={470}
+        rotate={50}
+        flipX
+        layer="back"
+      />
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <FamilySection />
       </div>
+
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <Itinerary />
       </div>
@@ -131,14 +135,14 @@ export default function ConfirmacionPage() {
         <DressCode />
       </div>
 
-      {/* <Separador
-        src="/icons/flowers.png"
-        position="right"
-        overlap={120}
-        width={250}
-        offsetX={180}
-        offsetY={-50}
-      /> */}
+      <Separador
+        src="/icons/separadores/separador.png"
+        position="center"
+        overlap={0}
+        width={150}
+        offsetX={0}
+        offsetY={0}
+      />
       <div style={{ position: "relative", padding: "0 20px 20px" }}>
         <Gifts />
       </div>
@@ -167,6 +171,19 @@ export default function ConfirmacionPage() {
         offsetX={-180}
         offsetY={-150}
       /> */}
+
+      <Separador
+        src="/icons/separadores/laurel-2.webp"
+        position="center"
+        overlap={860}
+        width={600}
+        offsetX={40}
+        offsetY={0}
+        layer="back"
+        rotate={5}
+        flipY
+        flipX
+      />
 
       {/* Formulario solo recibe lo que necesit */}
       <div style={{ position: "relative", zIndex: 2, padding: "0 20px 20px" }}>

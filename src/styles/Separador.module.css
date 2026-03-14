@@ -20,6 +20,6 @@
 
 .wrapper img {
   display: block;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   filter: drop-shadow(0 -5px 5px rgba(0, 0, 0, 0.5));
 }

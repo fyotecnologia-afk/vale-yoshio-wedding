@@ -14,8 +14,10 @@ type SeparadorProps = {
   flipY?: boolean;
   rotate?: number;
 
-  offsetX?: number; // mover horizontalmente
-  offsetY?: number; // mover verticalmente
+  offsetX?: number;
+  offsetY?: number;
+
+  layer?: "front" | "back"; // 👈 nuevo parámetro
 };
 
 const Separador: React.FC<SeparadorProps> = ({
@@ -29,6 +31,7 @@ const Separador: React.FC<SeparadorProps> = ({
   rotate = 0,
   offsetX = 0,
   offsetY = 0,
+  layer = "front", // default
 }) => {
   const scaleX = flipX ? -1 : 1;
   const scaleY = flipY ? -1 : 1;
@@ -40,10 +43,16 @@ const Separador: React.FC<SeparadorProps> = ({
     rotate(${rotate}deg)
   `;
 
+  const zIndex = layer === "front" ? 10 : "unset";
+
   return (
     <div
       className={`${styles.wrapper} ${styles[position]}`}
-      style={{ marginBottom: `-${overlap}px` }}
+      style={{
+        marginBottom: `-${overlap}px`,
+        position: "relative",
+        zIndex,
+      }}
     >
       <img
         src={src}
