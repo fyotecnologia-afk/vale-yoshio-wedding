@@ -5,7 +5,7 @@ import { Estado, CategoriaInvitado } from "@prisma/client";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   try {
     if (req.method === "GET") {
@@ -106,11 +106,11 @@ export default async function handler(
 
         let lastNumber = 0;
         if (lastInvitacion?.numero) {
-          const match = lastInvitacion.numero.match(/^MM(\d{3})$/);
+          const match = lastInvitacion.numero.match(/^VY(\d{3})$/);
           if (match) lastNumber = parseInt(match[1], 10);
         }
 
-        const nextNumber = `MM${String(lastNumber + 1).padStart(3, "0")}`;
+        const nextNumber = `VY${String(lastNumber + 1).padStart(3, "0")}`;
 
         const created = await db.invitacion.create({
           data: {
