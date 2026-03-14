@@ -347,7 +347,7 @@ export default function ConfirmInvitation({
               className="font-manjari"
             >
               <Input
-                placeholder="Comienza por MM"
+                placeholder="Comienza por VY"
                 className="font-manjari"
                 style={{ borderRadius: 8, padding: 12, color: "black" }}
               />
