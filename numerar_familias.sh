@@ -1,6 +1,6 @@
 #!/bin/bash
 
-prefijo="MM"
+prefijo="VY"
 contador=0
 prev_familia=""
 

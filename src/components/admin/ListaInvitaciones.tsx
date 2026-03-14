@@ -67,20 +67,13 @@ export default function ListaInvitaciones() {
     obtenerDatos();
   }, []);
 
-  const copiarAlPortapapeles = async (url: string, familia?: string) => {
-    const textoCompleto = `${familia ? `Querida ${familia},` : ""}
-    Nos llena de alegría compartir contigo que nos casamos! 💍✨
-
-Queremos invitarte con mucho cariño a nuestra boda. 
-En nuestra invitación digital encontrarás todos los detalles de este día tan especial.
+  const copiarAlPortapapeles = async (url: string) => {
+    const textoCompleto = `Nos llena de alegría compartir contigo que inos casamos! 💍✨
+Queremos invitarte con mucho cariño a nuestra boda. En nuestra invitación digital encontrarás todos los detalles de este día tan especial.
 
 Será un honor contar con tu presencia.
-
 Con cariño,
-Valeria y Yoshio ❤️
-
-${url}`;
-
+Valeria y Yoshio❤️\n\n${url}`;
     try {
       await navigator.clipboard.writeText(textoCompleto);
       message.success("Texto copiado al portapapeles");
