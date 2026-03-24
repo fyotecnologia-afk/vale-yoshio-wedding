@@ -76,14 +76,12 @@ export default function ConfirmInvitation({
     const fetchParametros = async () => {
       try {
         const res = await fetch("/api/parametrosGlobales");
-        if (!res.ok)
-          throw new Error("No se pudieron obtener parámetros globales");
         const data = await res.json();
 
         let fechaCorte: Date | null = null;
         if (data.fechaLimite) {
-          const [year, month, day] = data.fechaLimite.split("-").map(Number);
-          fechaCorte = new Date(year, month - 1, day);
+          const [y, m, d] = data.fechaLimite.split("-").map(Number);
+          fechaCorte = new Date(y, m - 1, d);
           fechaCorte.setHours(23, 59, 59, 999);
         }
 
@@ -91,17 +89,15 @@ export default function ConfirmInvitation({
         const bloqueadoFecha = fechaCorte
           ? now.getTime() > fechaCorte.getTime()
           : false;
-        const bloqueadoIntentos =
-          intentosRealizadosState >= (data.maxIntentos || 2);
 
         setFechaLimite(fechaCorte);
         setMaxIntentos(data.maxIntentos || 2);
         setCerradoPorFecha(bloqueadoFecha);
-        setCerradoPorIntentos(bloqueadoIntentos);
       } catch (error) {
         console.error(error);
       }
     };
+
     fetchParametros();
   }, []);
 
@@ -109,6 +105,10 @@ export default function ConfirmInvitation({
   useEffect(() => {
     if (numeroProp) form.setFieldsValue({ numero: numeroProp });
   }, [numeroProp, form]);
+
+  useEffect(() => {
+    setIntentosRealizadosState(intentosRealizados);
+  }, [intentosRealizados]);
 
   // Cada vez que cambien los intentos o el máximo, recalcula si está cerrado por intentos
   useEffect(() => {
@@ -164,7 +164,10 @@ export default function ConfirmInvitation({
         .map((inv) => inv.id);
       setSeleccionados(preSeleccionados);
 
-      if (!cerradoPorFecha && !cerradoPorIntentos) {
+      const bloqueado =
+        cerradoPorFecha || intentosRealizadosState >= maxIntentos;
+
+      if (!bloqueado) {
         setCurrentStep(1);
       }
     } catch (error: any) {
