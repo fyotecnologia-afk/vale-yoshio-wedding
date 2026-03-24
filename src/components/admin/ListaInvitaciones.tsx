@@ -4,17 +4,19 @@
 import React, { useState, useEffect } from "react";
 import {
   Table,
-  Typography,
   message,
   Space,
   Button,
   Collapse,
   Input,
+  Card,
+  Tag,
 } from "antd";
 import {
   CopyOutlined,
   DownloadOutlined,
   SearchOutlined,
+  EyeOutlined,
 } from "@ant-design/icons";
 import * as XLSX from "xlsx";
 
@@ -49,6 +51,15 @@ export default function ListaInvitaciones() {
   const [datos, setDatos] = useState<InvitacionData[]>([]);
   const [loading, setLoading] = useState(false);
   const [busqueda, setBusqueda] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detectar mobile
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   useEffect(() => {
     const obtenerDatos = async () => {
@@ -69,16 +80,17 @@ export default function ListaInvitaciones() {
 
   const copiarAlPortapapeles = async (url: string) => {
     const textoCompleto = `Nos llena de alegría compartir contigo que inos casamos! 💍✨
-Queremos invitarte con mucho cariño a nuestra boda. En nuestra invitación digital encontrarás todos los detalles de este día tan especial.
+Queremos invitarte con mucho cariño a nuestra boda.
 
 Será un honor contar con tu presencia.
 Con cariño,
 Valeria y Yoshio❤️\n\n${url}`;
+
     try {
       await navigator.clipboard.writeText(textoCompleto);
-      message.success("Texto copiado al portapapeles");
+      message.success("Texto copiado");
     } catch {
-      message.error("No se pudo copiar el texto");
+      message.error("No se pudo copiar");
     }
   };
 
@@ -100,30 +112,14 @@ Valeria y Yoshio❤️\n\n${url}`;
                 : i.respuesta === "NO"
                   ? "No asistirá"
                   : "Sin respuesta"
-            }${i.principal ? " (Principal)" : ""}${
-              i.categoria ? ` [${i.categoria}]` : ""
             }`,
         )
         .join("\n");
-
-      const intento1 = inv.dedicatorias[0]
-        ? `${new Date(inv.dedicatorias[0].fecha).toLocaleDateString()}\n${
-            inv.dedicatorias[0].texto
-          }`
-        : "No hay dedicatorias";
-
-      const intento2 = inv.dedicatorias[1]
-        ? `${new Date(inv.dedicatorias[1].fecha).toLocaleDateString()}\n${
-            inv.dedicatorias[1].texto
-          }`
-        : "No hay dedicatorias";
 
       rows.push({
         "Número Invitación": inv.numeroInvitacion,
         Familia: inv.familia || "",
         Invitados: invitadosText,
-        "Intento 1": intento1,
-        "Intento 2": intento2,
       });
     });
 
@@ -133,12 +129,12 @@ Valeria y Yoshio❤️\n\n${url}`;
     XLSX.writeFile(workbook, "Invitaciones.xlsx");
   };
 
+  // TABLE (DESKTOP)
   const columnas = [
     {
-      title: "Número Invitación",
+      title: "Número",
       dataIndex: "numeroInvitacion",
       key: "numeroInvitacion",
-      fixed: "left" as const,
     },
     {
       title: "Familia",
@@ -150,30 +146,20 @@ Valeria y Yoshio❤️\n\n${url}`;
       dataIndex: "url",
       key: "url",
       render: (url: string) => (
-        <Space direction="vertical" size={4} style={{ maxWidth: 200 }}>
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-block",
-              maxWidth: "100%",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              whiteSpace: "nowrap",
-              verticalAlign: "bottom",
-            }}
-            title={url}
-          >
-            {url}
-          </a>
-          <Button
-            icon={<CopyOutlined />}
-            size="small"
-            onClick={() => copiarAlPortapapeles(url)}
-          >
-            Copiar
-          </Button>
+        <Space direction="vertical">
+          <Space>
+            <Button
+              size="small"
+              icon={<EyeOutlined />}
+              onClick={() => window.open(url, "_blank")}
+            />
+
+            <Button
+              size="small"
+              icon={<CopyOutlined />}
+              onClick={() => copiarAlPortapapeles(url)}
+            />
+          </Space>
         </Space>
       ),
     },
@@ -182,49 +168,74 @@ Valeria y Yoshio❤️\n\n${url}`;
       dataIndex: "invitados",
       key: "invitados",
       render: (invitados: Invitado[]) => (
-        <ul style={{ paddingLeft: 20, margin: 0 }}>
-          {invitados.map((inv) => (
-            <li key={inv.id}>
-              {inv.nombre} —{" "}
+        <ul style={{ paddingLeft: 16 }}>
+          {invitados.map((i) => (
+            <li key={i.id}>
+              {i.nombre} —{" "}
               <strong>
-                {inv.respuesta === "SI"
-                  ? "Confirmado"
-                  : inv.respuesta === "NO"
-                    ? "No asistirá"
-                    : "Sin respuesta"}
+                {i.respuesta === "SI" ? "✔" : i.respuesta === "NO" ? "✘" : "-"}
               </strong>
-              {inv.principal ? " (Principal)" : ""}
-              {inv.categoria ? ` [${inv.categoria}]` : ""}
             </li>
           ))}
         </ul>
       ),
     },
-    {
-      title: "Dedicatorias",
-      dataIndex: "dedicatorias",
-      key: "dedicatorias",
-      render: (dedicatorias: Dedicatoria[]) =>
-        dedicatorias.length > 0 ? (
+  ];
+
+  // MOBILE UI (CARDS)
+  const renderMobile = () => (
+    <Space direction="vertical" style={{ width: "100%" }} size={16}>
+      {datosFiltrados.map((inv) => (
+        <Card
+          key={inv.id}
+          style={{ borderRadius: 16 }}
+          title={`Invitación ${inv.numeroInvitacion}`}
+          extra={
+            <Space>
+              <Button
+                size="small"
+                icon={<EyeOutlined />}
+                onClick={() => window.open(inv.url, "_blank")}
+              />
+              <Button
+                size="small"
+                icon={<CopyOutlined />}
+                onClick={() => copiarAlPortapapeles(inv.url)}
+              />
+            </Space>
+          }
+        >
+          <p>
+            <strong>Familia:</strong> {inv.familia || "-"}
+          </p>
+
+          <div style={{ marginBottom: 10 }}>
+            <strong>Invitados:</strong>
+            <ul style={{ paddingLeft: 18 }}>
+              {inv.invitados.map((i) => (
+                <li key={i.id}>
+                  {i.nombre}{" "}
+                  {i.respuesta === "SI" && <Tag color="green">Asiste</Tag>}
+                  {i.respuesta === "NO" && <Tag color="red">No</Tag>}
+                  {i.respuesta === null && <Tag>Sin respuesta</Tag>}
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <Collapse>
-            {dedicatorias.map((d) => (
-              <Panel
-                header={`Dedicatoria - ${new Date(
-                  d.fecha,
-                ).toLocaleDateString()}`}
-                key={d.id}
-              >
-                <p style={{ whiteSpace: "pre-wrap", margin: 0 }}>{d.texto}</p>
+            {inv.dedicatorias.map((d) => (
+              <Panel header={new Date(d.fecha).toLocaleDateString()} key={d.id}>
+                <p style={{ whiteSpace: "pre-wrap" }}>{d.texto}</p>
               </Panel>
             ))}
           </Collapse>
-        ) : (
-          <p>No hay dedicatorias</p>
-        ),
-    },
-  ];
+        </Card>
+      ))}
+    </Space>
+  );
 
-  // Filtrar datos según búsqueda
+  // FILTRO
   const datosFiltrados = datos.filter((inv) => {
     const invitadosText = inv.invitados.map((i) => i.nombre).join(" ");
     return (
@@ -235,34 +246,47 @@ Valeria y Yoshio❤️\n\n${url}`;
   });
 
   return (
-    <div style={{ padding: 0 }}>
-      <Space style={{ marginBottom: 16 }}>
+    <div>
+      {/* HEADER */}
+      <Space
+        style={{
+          marginBottom: 16,
+          width: "100%",
+          flexDirection: isMobile ? "column" : "row",
+        }}
+      >
         <Input
-          placeholder="Buscar por número de invitación, familia o invitados"
+          placeholder="Buscar..."
           value={busqueda}
           onChange={(e) => setBusqueda(e.target.value)}
-          style={{ width: 300 }}
+          style={{ width: isMobile ? "100%" : 300 }}
           allowClear
           prefix={<SearchOutlined />}
         />
+
         <Button
           type="primary"
           icon={<DownloadOutlined />}
           onClick={exportarExcel}
+          block={isMobile}
         >
-          Exportar a Excel
+          Exportar
         </Button>
       </Space>
-      {datos.length > 0 && (
-        <Table
-          columns={columnas}
-          dataSource={datosFiltrados}
-          rowKey="id"
-          loading={loading}
-          pagination={{ pageSize: 5 }}
-          scroll={{ x: "max-content" }}
-        />
-      )}
+
+      {/* CONTENIDO */}
+      {datos.length > 0 &&
+        (isMobile ? (
+          renderMobile()
+        ) : (
+          <Table
+            columns={columnas}
+            dataSource={datosFiltrados}
+            rowKey="id"
+            loading={loading}
+            pagination={{ pageSize: 5 }}
+          />
+        ))}
     </div>
   );
 }

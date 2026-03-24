@@ -1,6 +1,8 @@
 // src/components/admin/InvitationForm.tsx
 import React from "react";
-import { Form, Input, Switch, InputNumber, Select, Button, Space } from "antd";
+import { Form, Input, Button, Row, Col, Grid, Space } from "antd";
+
+const { useBreakpoint } = Grid;
 
 type Props = {
   initialValues?: any;
@@ -16,6 +18,8 @@ const InvitationForm: React.FC<Props> = ({
   submitText = "Guardar",
 }) => {
   const [form] = Form.useForm();
+  const screens = useBreakpoint();
+  const isMobile = !screens.md;
 
   return (
     <Form
@@ -27,26 +31,47 @@ const InvitationForm: React.FC<Props> = ({
       }}
       onFinish={onSubmit}
     >
-      <Space size="large" wrap>
-        <Form.Item
-          label="Hosted By"
-          name="hostedBy"
-          rules={[{ required: true }]}
-        >
-          <Input placeholder="Novio / Novia / Ambos" />
-        </Form.Item>
-        <Form.Item label="Tipo" name="tipo" rules={[{ required: true }]}>
-          <Input placeholder="Familiar / Amigos / ..." />
-        </Form.Item>
-        <Form.Item label="Familia" name="familia" rules={[{ required: true }]}>
-          <Input placeholder="Apellido(s) Familia" />
-        </Form.Item>
-      </Space>
+      {/* 🔥 GRID RESPONSIVE */}
+      <Row gutter={[16, 0]}>
+        <Col xs={24} md={8}>
+          <Form.Item
+            label="Hosted By"
+            name="hostedBy"
+            rules={[{ required: true }]}
+          >
+            <Input placeholder="Novio / Novia / Ambos" />
+          </Form.Item>
+        </Col>
 
+        <Col xs={24} md={8}>
+          <Form.Item label="Tipo" name="tipo" rules={[{ required: true }]}>
+            <Input placeholder="Familiar / Amigos / ..." />
+          </Form.Item>
+        </Col>
+
+        <Col xs={24} md={8}>
+          <Form.Item
+            label="Familia"
+            name="familia"
+            rules={[{ required: true }]}
+          >
+            <Input placeholder="Apellido(s) Familia" />
+          </Form.Item>
+        </Col>
+      </Row>
+
+      {/* 🔥 BOTÓN RESPONSIVE */}
       <Form.Item>
-        <Button type="primary" htmlType="submit" loading={loading}>
-          {submitText}
-        </Button>
+        <Space style={{ width: "100%", justifyContent: "flex-end" }}>
+          <Button
+            type="primary"
+            htmlType="submit"
+            loading={loading}
+            block={isMobile}
+          >
+            {submitText}
+          </Button>
+        </Space>
       </Form.Item>
     </Form>
   );

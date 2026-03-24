@@ -11,13 +11,19 @@ import {
   Select,
   Switch,
   notification,
+  Grid,
 } from "antd";
 import { useSpring, animated } from "@react-spring/web";
 import Link from "next/link";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
 
+const { useBreakpoint } = Grid;
+
 export default function AdminList() {
+  const screens = useBreakpoint();
+  const isMobile = !screens.md;
+
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [q, setQ] = useState("");
@@ -34,7 +40,7 @@ export default function AdminList() {
   const fetchAllItems = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/admin/invitaciones?pageSize=10000"); // traemos todos
+      const res = await fetch("/api/admin/invitaciones?pageSize=10000");
       const json = await res.json();
       const items = (json.items || []).map((item: any) => ({
         ...item,
@@ -51,7 +57,6 @@ export default function AdminList() {
     fetchAllItems();
   }, []);
 
-  // Filtrado en el cliente
   const filteredData = useMemo(() => {
     return data.filter((item) => {
       const text = q.toLowerCase();
@@ -67,8 +72,8 @@ export default function AdminList() {
         especial === undefined
           ? true
           : especial
-          ? item.invitados?.some((inv: any) => inv.especial)
-          : !item.invitados?.some((inv: any) => inv.especial);
+            ? item.invitados?.some((inv: any) => inv.especial)
+            : !item.invitados?.some((inv: any) => inv.especial);
 
       return matchesQ && matchesEstado && matchesEspecial;
     });
@@ -77,17 +82,14 @@ export default function AdminList() {
   const exportToExcel = async () => {
     try {
       const rows = filteredData.flatMap((inv: any) => {
-        // Ordenar confirmaciones por fecha (de más reciente a más antigua)
         const orderedConfirmations = (inv.confirmaciones || []).sort(
           (a: any, b: any) =>
-            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
         );
 
-        // Mapeamos la respuesta más reciente por invitadoId
         const confirmMap: Record<string, string> = {};
         orderedConfirmations.forEach((c: any) => {
           c.confirmacionInvitados?.forEach((ci: any) => {
-            // Solo actualizamos si aún no existe una respuesta previa (la primera encontrada será la más reciente)
             if (!(ci.invitadoId in confirmMap)) {
               confirmMap[ci.invitadoId] = ci.respuesta;
             }
@@ -106,8 +108,8 @@ export default function AdminList() {
             confirmMap[guest.id] === "SI"
               ? "CONFIRMADO"
               : confirmMap[guest.id] === "NO"
-              ? "NO CONFIRMADO"
-              : "SIN RESPUESTA",
+                ? "NO CONFIRMADO"
+                : "SIN RESPUESTA",
         }));
       });
 
@@ -131,75 +133,103 @@ export default function AdminList() {
     <animated.div
       style={{
         ...spring,
-        maxWidth: "100%",
-        margin: "0 auto",
-        overflowX: "auto",
+        width: "100%",
       }}
     >
-      <Space style={{ marginBottom: 12, flexWrap: "wrap" }}>
+      {/* FILTROS RESPONSIVE */}
+      <Space
+        direction={isMobile ? "vertical" : "horizontal"}
+        style={{ marginBottom: 12, width: "100%" }}
+        size={isMobile ? "middle" : "small"}
+        wrap
+      >
         <Input.Search
-          placeholder="Buscar por número, familia, tipo, hostedBy..."
+          placeholder="Buscar..."
           allowClear
-          enterButton="Buscar"
+          enterButton={!isMobile}
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          style={{ minWidth: 260, flex: "1 1 300px" }}
+          style={{ width: "100%" }}
         />
 
-        <Select
-          placeholder="Estado"
-          allowClear
-          style={{ width: 180 }}
-          value={estado}
-          onChange={setEstado}
-          options={[
-            { value: "ACTIVO", label: "ACTIVO" },
-            { value: "INACTIVO", label: "INACTIVO" },
-          ]}
-        />
+        <Space wrap style={{ width: "100%" }}>
+          <Select
+            placeholder="Estado"
+            allowClear
+            style={{ flex: 1, minWidth: 120 }}
+            value={estado}
+            onChange={setEstado}
+            options={[
+              { value: "ACTIVO", label: "ACTIVO" },
+              { value: "INACTIVO", label: "INACTIVO" },
+            ]}
+          />
 
-        <Select
-          placeholder="Especial"
-          allowClear
-          style={{ width: 180 }}
-          value={especial === undefined ? undefined : especial ? "SI" : "NO"}
-          onChange={(val) => {
-            if (val === "SI") setEspecial(true);
-            else if (val === "NO") setEspecial(false);
-            else setEspecial(undefined);
-          }}
-          options={[
-            { value: "SI", label: "Sí" },
-            { value: "NO", label: "No" },
-          ]}
-        />
+          <Select
+            placeholder="Especial"
+            allowClear
+            style={{ flex: 1, minWidth: 120 }}
+            value={especial === undefined ? undefined : especial ? "SI" : "NO"}
+            onChange={(val) => {
+              if (val === "SI") setEspecial(true);
+              else if (val === "NO") setEspecial(false);
+              else setEspecial(undefined);
+            }}
+            options={[
+              { value: "SI", label: "Sí" },
+              { value: "NO", label: "No" },
+            ]}
+          />
+        </Space>
 
-        <Button type="primary" onClick={() => setOpenCreate(true)}>
-          Nueva invitación
-        </Button>
+        <Space wrap style={{ width: "100%" }}>
+          <Button
+            block={isMobile}
+            type="primary"
+            onClick={() => setOpenCreate(true)}
+          >
+            Nueva invitación
+          </Button>
 
-        <Button onClick={exportToExcel} type="default">
-          Exportar a Excel
-        </Button>
+          <Button block={isMobile} onClick={exportToExcel}>
+            Exportar
+          </Button>
+        </Space>
       </Space>
 
+      {/* TABLA */}
       <Table
         rowKey="id"
         loading={loading}
         dataSource={filteredData}
+        size={isMobile ? "small" : "middle"}
+        expandable={
+          isMobile
+            ? {
+                expandedRowRender: (r) => (
+                  <div style={{ fontSize: 12 }}>
+                    <Space wrap>
+                      <Tag color="blue">Invitados: {r.conteoInvitados}</Tag>
+                      <Tag color="green">Conf: {r.conteoConfirmados}</Tag>
+                      <Tag color="red">No Conf: {r.conteoNoConfirmados}</Tag>
+                      <Tag>Sin resp: {r.conteoSinRespuesta}</Tag>
+                    </Space>
+                  </div>
+                ),
+              }
+            : undefined
+        }
         columns={[
-          { title: "Número", dataIndex: "numero", responsive: ["sm"] },
-          { title: "Familia", dataIndex: "familia", responsive: ["sm"] },
+          { title: "Número", dataIndex: "numero" },
+          { title: "Familia", dataIndex: "familia" },
           { title: "Tipo", dataIndex: "tipo", responsive: ["md"] },
-          { title: "Hosted By", dataIndex: "hostedBy", responsive: ["md"] },
+          { title: "Hosted By", dataIndex: "hostedBy", responsive: ["lg"] },
           {
             title: "Estado",
             dataIndex: "estado",
             render: (v, r) => (
               <Switch
                 checked={v === "ACTIVO"}
-                checkedChildren="ACTIVO"
-                unCheckedChildren="INACTIVO"
                 onChange={async (checked) => {
                   const nuevoEstado = checked ? "ACTIVO" : "INACTIVO";
                   try {
@@ -208,60 +238,49 @@ export default function AdminList() {
                       headers: { "Content-Type": "application/json" },
                       body: JSON.stringify({ estado: nuevoEstado }),
                     });
-                    message.success(`Estado actualizado a ${nuevoEstado}`);
-                    fetchAllItems(); // recargamos todos los datos
+                    message.success(`Estado actualizado`);
+                    fetchAllItems();
                   } catch (e: any) {
                     message.error(e.message);
                   }
                 }}
               />
             ),
-            responsive: ["sm"],
-          },
-          {
-            title: "Flags",
-            render: (_, r) => (
-              <Space size="small" wrap>
-                {r.invitados?.some((inv: any) => inv.especial) && (
-                  <Tag color="yellow">Especial</Tag>
-                )}
-              </Space>
-            ),
-            responsive: ["md"],
           },
           {
             title: "Conteo",
             render: (_, r) => (
               <Space size="small" wrap>
-                <Tag>Invitados: {r.conteoInvitados}</Tag>
-                <Tag>Conf.: {r.conteoConfirmados}</Tag>
-                <Tag>No Conf.: {r.conteoNoConfirmados}</Tag>
-                <Tag>Sin resp.: {r.conteoSinRespuesta}</Tag>
+                <Tag color="blue">Invitados: {r.conteoInvitados}</Tag>
+                <Tag color="green">Sí: {r.conteoConfirmados}</Tag>
+                <Tag color="red">No: {r.conteoNoConfirmados}</Tag>
+                <Tag>Sin Respuesta: {r.conteoSinRespuesta}</Tag>
               </Space>
             ),
-            responsive: ["sm"],
+            responsive: ["md"],
           },
           {
             title: "Acciones",
+            fixed: isMobile ? undefined : "right",
             render: (_, r) => (
-              <Space>
-                <Link href={`/admin/${r.id}`}>
-                  <Button>Editar</Button>
-                </Link>
-              </Space>
+              <Link href={`/admin/${r.id}`}>
+                <Button size={isMobile ? "small" : "middle"}>Editar</Button>
+              </Link>
             ),
           },
         ]}
         pagination={{ pageSize: 10 }}
-        scroll={{ x: "max-content" }}
+        scroll={{ x: true }}
       />
 
-      {/* Modal para nueva invitación */}
+      {/* MODAL */}
       <Modal
         title="Nueva invitación"
         open={openCreate}
         onCancel={() => setOpenCreate(false)}
         footer={null}
+        width={isMobile ? "100%" : 600}
+        style={isMobile ? { top: 0 } : {}}
         destroyOnHidden
       >
         <Space direction="vertical" style={{ width: "100%" }}>
@@ -285,14 +304,14 @@ export default function AdminList() {
                 setUltimoNumero(created.numero);
                 notification.success({
                   message: `Invitación creada`,
-                  description: `Número de invitación: ${created.numero}`,
+                  description: `Número: ${created.numero}`,
                   duration: 0,
                 });
                 setOpenCreate(false);
                 fetchAllItems();
               },
               submitText: "Crear",
-            }
+            },
           )}
         </Space>
       </Modal>

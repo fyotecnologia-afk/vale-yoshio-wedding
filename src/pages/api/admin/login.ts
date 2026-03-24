@@ -23,8 +23,12 @@ function rateLimit(ip: string) {
   }
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method not allowed" });
 
   try {
     const ip =
@@ -34,17 +38,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     rateLimit(ip);
 
     // Parse body
-    const raw = typeof req.body === "string" ? req.body : JSON.stringify(req.body);
+    const raw =
+      typeof req.body === "string" ? req.body : JSON.stringify(req.body);
     const json = safeParseJson<any>(raw);
     if (!json) return res.status(400).json({ error: "Invalid JSON" });
 
     const parsed = loginSchema.safeParse(json);
-    if (!parsed.success) return res.status(400).json({ error: "Datos inválidos" });
+    if (!parsed.success)
+      return res.status(400).json({ error: "Datos inválidos" });
 
     const { username, password } = parsed.data;
 
     // Validate credentials
     const okUser = username === process.env.ADMIN_USERNAME;
+    console.log(
+      "process.env.ADMIN_PASSWORD_HASH",
+      process.env.ADMIN_PASSWORD_HASH,
+    );
     const hash = process.env.ADMIN_PASSWORD_HASH || "";
     const okPass = hash ? await bcrypt.compare(password, hash) : false;
 
@@ -53,7 +63,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     // Get and save session
-    const session: IronSession<AdminSession> = await getIronSession(req, res, sessionOptions);
+    const session: IronSession<AdminSession> = await getIronSession(
+      req,
+      res,
+      sessionOptions,
+    );
     console.log("Session before saving:", session);
 
     session.isLoggedIn = true;
