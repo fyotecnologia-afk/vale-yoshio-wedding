@@ -36,20 +36,18 @@ export default async function handler(
 ) {
   try {
     const invitaciones = await db.invitacion.findMany({
-      select: {
-        id: true,
-        numero: true,
-        hostedBy: true,
-        tipo: true,
-        familia: true,
-        invitados: {
-          include: { confirmacionInvitados: true },
+      include: {
+        invitados: true,
+        confirmaciones: {
+          include: {
+            confirmacionInvitados: true,
+          },
+          orderBy: {
+            createdAt: "desc", // 👈 IMPORTANTE: última confirmación primero
+          },
         },
-        confirmaciones: true,
       },
     });
-
-    console.log("Invitaciones encontradas:", invitaciones.length);
 
     const protocol = req.headers["x-forwarded-proto"] || "http";
     const host = req.headers.host;
@@ -60,14 +58,24 @@ export default async function handler(
       const url = `${baseUrl}/${encodeURIComponent(codigo)}`;
 
       const invitados: Invitado[] = inv.invitados.map((invitado) => {
-        // Tomamos la primera confirmación si existe
-        const confirmacionInv = invitado.confirmacionInvitados[0];
+        let respuesta: Respuesta = null;
+
+        // 🔥 Buscar en confirmaciones (NO en invitado directo)
+        for (const confirmacion of inv.confirmaciones) {
+          const encontrado = confirmacion.confirmacionInvitados.find(
+            (ci) => ci.invitadoId === invitado.id,
+          );
+
+          if (encontrado) {
+            respuesta = encontrado.respuesta;
+            break; // 👈 nos quedamos con la más reciente
+          }
+        }
 
         return {
           id: invitado.id,
           nombre: invitado.nombre,
-          respuesta: confirmacionInv ? confirmacionInv.respuesta : null,
-          // Convertimos null a undefined para coincidir con el tipo
+          respuesta,
           principal: invitado.principal ?? undefined,
           categoria: invitado.categoria ?? undefined,
           estado: invitado.estado,
